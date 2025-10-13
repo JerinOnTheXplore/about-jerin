@@ -16,11 +16,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      style={{ transform: `rotate(${rotation}deg)` }}
-      className="fixed right-4 top-28 text-base-content transition-all duration-500 z-50 hover:scale-150"
+      className="fixed right-0 bg-blue-900/90 dark:bg-blue-500/30 px-5 py-2 top-28 text-base-content transition-all duration-500 z-50 hover:scale-120"
       title="Toggle Theme"
     >
-      {theme === "light" ? <ImSun className="text-yellow-500" size={24}/> : <GoMoon className="text-yellow-500" size={24}/>}
+      {theme === "light" ? <ImSun className="text-yellow-500 font-extrabold" size={32} style={{ transform: `rotate(${rotation}deg)` }}/> : <GoMoon className="text-yellow-500 font-extrabold" size={32} style={{ transform: `rotate(${rotation}deg)` }}/>}
     </button>
   );
 }
