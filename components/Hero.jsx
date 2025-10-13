@@ -75,7 +75,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          I’m a <span className="font-semibold">frontend-focused MERN stack developer</span> who loves building modern, responsive web applications using React, Node.js, Express.js, 
+          I’m a <span className="font-semibold">Frontend-Developer</span> who loves building modern, responsive web applications using React, Node.js, Express.js, 
           and MongoDB. I’ve also built a few projects with Next.js and currently exploring it deeply.
         </motion.p>
 
@@ -92,8 +92,10 @@ export default function Hero() {
           <a href="https://github.com/JerinOnTheXplore" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
             <FaGithub size={32} className="text-blue-500/60 dark:text-blue-400/80" />
           </a>
-          <a href="mailto:jerinjerin101325@gmail.com" className="hover:scale-110 transition-transform">
-            <FaEnvelope size={32} className="text-blue-500/60 dark:text-blue-400/80" />
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
+          target="_blank"
+          rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+          <FaEnvelope size={32} className="text-blue-500/60 dark:text-blue-400/80" />
           </a>
         </motion.div>
       </div>
