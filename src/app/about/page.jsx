@@ -162,12 +162,14 @@ export default function About() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <a
-            href="/resume.pdf"
-            download
-            className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:scale-105 transition-transform"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
+          target="_blank"
+          rel="noopener noreferrer"
+            className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:scale-105 transition-transform w-40"
           >
-            Download Resume
+            Hire Me
           </a>
+          
         </motion.div>
       </div>
     </section>

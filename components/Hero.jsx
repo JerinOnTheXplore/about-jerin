@@ -99,6 +99,13 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
+       <a
+            href="/resume.pdf"
+            download
+            className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
+          >
+            Download Resume
+          </a>
     </section>
   );
 }
