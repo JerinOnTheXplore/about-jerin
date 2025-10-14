@@ -49,7 +49,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-3  items-center space-y-3">
           {/* left: personal Details */}
           <motion.div
-            className="w-full  h-70  sm:h-70 bg-base-300 md:h-120  p-6 sm:p-8"
+            className="w-full  h-96  sm:h-70 bg-base-300 md:h-120  p-6 sm:p-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -79,18 +79,6 @@ export default function About() {
                   <td className="font-semibold pr-3 sm:pr-4">Address:</td>
                   <td>Dhaka, Bangladesh</td>
                 </tr>
-    <tr>
-      <td>
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6 flex flex-col items-center py-2"
-        >
-          Email Me
-        </a>
-      </td>
-    </tr>
     </tbody>
             </table>
           </motion.div>
@@ -114,7 +102,7 @@ export default function About() {
 
           {/* Right: About Text Slider */}
           <motion.div
-            className="w-full  h-70  sm:h-70 bg-base-300 md:h-120 rounded p-6 sm:p-8 shadow-md"
+            className="w-full  h-96  sm:h-70 bg-base-300 md:h-120 rounded p-6 sm:p-8 shadow-md"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
