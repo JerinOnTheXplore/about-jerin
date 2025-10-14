@@ -10,7 +10,7 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     // theme change hole rotate hobe
-    setRotation(prev => prev + 180);
+    setRotation(prev => prev + 360);
   }, [theme]);
 
   return (

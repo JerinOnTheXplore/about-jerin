@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { RiMenuUnfold4Fill } from "react-icons/ri"; 
 import { FaHome, FaUser, FaTools, FaGraduationCap, FaEnvelope } from "react-icons/fa"; 
+import { GoProjectSymlink } from "react-icons/go";
 
 export default function Sidebar({ isOpen, setIsOpen }) {
   const pathname = usePathname();
@@ -12,6 +13,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
     { name: "Home", href: "/", icon: <FaHome /> },
     { name: "About", href: "/about", icon: <FaUser /> },
     { name: "Skills", href: "/skills", icon: <FaTools /> },
+    { name: "Projects", href: "/projects", icon: <GoProjectSymlink /> },
     { name: "Education", href: "/education", icon: <FaGraduationCap /> },
     { name: "Contact", href: "/contact", icon: <FaEnvelope /> },
   ];

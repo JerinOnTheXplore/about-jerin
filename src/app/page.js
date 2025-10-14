@@ -1,5 +1,6 @@
 import Hero from "../../components/Hero";
 import About from "./about/page";
+import Projects from "./projects/page";
 import Skills from "./skills/page";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Skills/>
+      <Projects/>
     </div>
   );
 }

@@ -42,12 +42,12 @@ export default function About() {
           >
             About Me
           </motion.h1>
-          <div className="w-20 sm:w-24 h-1 bg-blue-400 mx-auto rounded"></div>
+          <div className="w-20 sm:w-40 md:w-48 h-1 bg-blue-400 mx-auto rounded"></div>
         </div>
 
-        {/* Responsive grid layout */}
+        {/* responsive grid layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3  items-center space-y-3">
-          {/* Left: Personal Details */}
+          {/* left: personal Details */}
           <motion.div
             className="w-full  h-70  sm:h-70 bg-base-300 md:h-120  p-6 sm:p-8"
             initial={{ opacity: 0, x: -50 }}
@@ -79,7 +79,19 @@ export default function About() {
                   <td className="font-semibold pr-3 sm:pr-4">Address:</td>
                   <td>Dhaka, Bangladesh</td>
                 </tr>
-              </tbody>
+    <tr>
+      <td>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6 flex flex-col items-center py-2"
+        >
+          Email Me
+        </a>
+      </td>
+    </tr>
+    </tbody>
             </table>
           </motion.div>
 
@@ -92,7 +104,7 @@ export default function About() {
           >
             <div className="relative w-40 h-52 sm:w-56 sm:h-70 md:w-86 md:h-120 rounded overflow-hidden ring-4 ring-blue-900/90 dark:ring-500-30 shadow-xl">
               <Image
-                src="/images/my-photo.jpg"
+                src="/images/my-photoo.jpg"
                 alt="Jerin"
                 fill
                 className="object-cover"
@@ -160,16 +172,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-        >
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
-          target="_blank"
-          rel="noopener noreferrer"
-            className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:scale-105 transition-transform w-40"
-          >
-            Hire Me
-          </a>
-          
+        >  
         </motion.div>
       </div>
     </section>

@@ -37,7 +37,7 @@ export default function Skills() {
         >
           Skills
         </motion.h2>
-        <div className="w-20 sm:w-24 h-1 bg-blue-400 mx-auto rounded"></div>
+        <div className="w-24 sm:w-36 md:w-40 h-1 bg-blue-400 mx-auto rounded"></div>
         <motion.p
           className="text-lg md:text-xl text-base-content/70 mb-12 mt-2"
           initial={{ opacity: 0, y: 20 }}
@@ -56,6 +56,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.2 }}
+               viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className="text-xl font-semibold mb-4 text-blue-400">{category}</h3>
               <div className="flex flex-wrap justify-center gap-4">
