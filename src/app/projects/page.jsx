@@ -39,7 +39,7 @@ export default function Projects() {
         >
           Projects
         </motion.h2>
-        <div className="w-24 sm:w-36 md:w-40 h-1 bg-blue-400 mx-auto rounded mt-4"></div>
+        <div className="w-24 sm:w-36 md:w-48 h-1 bg-blue-400 mx-auto rounded mt-4"></div>
         <p className="text-lg text-base-content/70 pt-4">
           A glimpse of the real-world projects I’ve built.
         </p>

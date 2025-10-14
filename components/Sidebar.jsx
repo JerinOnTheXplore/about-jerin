@@ -47,7 +47,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
             Jerin
           </h2>
           <p className="text-sm  mb-4 text-base-content">
-            Web Developer
+            Frontend Developer
           </p>
           <hr className="border-gray-300 dark:border-gray-700 w-full mx-auto mb-6" />
         </div>
@@ -61,7 +61,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center gap-3 justify-center py-2 px-4 rounded-lg text-center font-medium transition-colors duration-200 ${
+                className={`flex items-center gap-3 justify-center py-2 px-4 rounded text-center font-medium transition-colors duration-200 ${
                   active
                     ? "bg-blue-900/90 dark:bg-blue-500/30 text-base-content"
                     : "text-base-content hover:bg-gray-200 dark:hover:bg-gray-600"
