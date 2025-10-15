@@ -36,7 +36,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       >
         {/* Profile */}
         <div className="text-center mt-24">
-        <div className="w-28 h-28 mx-auto rounded-full overflow-hidden object-cover border-4 border-gray-400">
+        <div className="w-28 h-29 mx-auto rounded-full overflow-hidden object-cover border-4 border-gray-400">
         <Image
          src="/images/profile.jpg"
          alt="Jerin"

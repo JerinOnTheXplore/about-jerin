@@ -17,32 +17,32 @@ export default function Footer() {
           <h3 className="text-xl text-base-content font-semibold mb-2">Quick Links</h3>
           <ul className="flex flex-col gap-1 text-white/70 text-sm">
             <li>
-              <Link href="#home" className="hover:text-blue-300 transition-colors text-base-content">
+              <Link href="#home" className=" transition-colors text-base-content">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#about" className="hover:text-blue-300 transition-colors text-base-content">
+              <Link href="#about" className=" transition-colors text-base-content">
                 About
               </Link>
             </li>
             <li>
-              <Link href="#skills" className="hover:text-blue-300 transition-colors text-base-content">
+              <Link href="#skills" className=" transition-colors text-base-content">
                 Skills
               </Link>
             </li>
             <li>
-              <Link href="#projects" className="hover:text-blue-300 transition-colors text-base-content">
+              <Link href="#projects" className=" transition-colors text-base-content">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="#education" className="hover:text-blue-300 transition-colors text-base-content">
+              <Link href="#education" className=" transition-colors text-base-content">
                 Education
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="hover:text-blue-300 transition-colors text-base-content">
+              <Link href="#contact" className="transition-colors text-base-content">
                 Contact
               </Link>
             </li>
