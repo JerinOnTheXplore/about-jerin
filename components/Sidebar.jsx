@@ -36,13 +36,15 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       >
         {/* Profile */}
         <div className="text-center mt-24">
-          <Image
-            src="/images/profile.jpg"
-            alt="Jerin"
-            width={150}
-            height={150}
-            className="rounded-full mx-auto border-4 border-gray-400"
-          />
+        <div className="w-28 h-28 mx-auto rounded-full overflow-hidden object-cover border-4 border-gray-400">
+        <Image
+         src="/images/profile.jpg"
+         alt="Jerin"
+         width={160}
+         height={160}
+         className="object-cover w-full h-full"
+        />
+        </div>
           <h2 className="text-lg font-semibold mt-3 text-base-content">
             Jerin
           </h2>

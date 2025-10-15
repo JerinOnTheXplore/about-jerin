@@ -11,16 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-blue-900/90 dark:bg-blue-500/30 text-base-content py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
-        {/* about */}
-        <div className="flex-1">
-          <h3 className="text-xl text-base-content font-semibold mb-2">About Me</h3>
-          <p className="text-base-content text-sm leading-relaxed">
-            I am a passionate frontend developer who loves building user friendly and responsive web applications.
-            Feel free to reach out for collaborations, projects, or just to connect!
-          </p>
-        </div>
-
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-evenly gap-10">
         {/*quick links */}
         <div className="flex-1">
           <h3 className="text-xl text-base-content font-semibold mb-2">Quick Links</h3>
@@ -97,7 +88,7 @@ export default function Footer() {
       {/* top button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-blue-700/80 hover:bg-blue-800 text-base-content p-3 rounded-full shadow-lg transition-all z-50"
+        className="fixed bottom-6 right-6 bg-blue-500/50 text-white p-3 rounded-full shadow-lg transition-all z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >

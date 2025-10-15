@@ -42,7 +42,7 @@ export default function About() {
           >
             About Me
           </motion.h1>
-          <div className="w-20 sm:w-40 md:w-48 h-1 bg-blue-400 mx-auto rounded"></div>
+          <div className="w-36 sm:w-40 md:w-56 h-1 bg-blue-400 mx-auto rounded"></div>
         </div>
 
         {/* responsive grid layout */}
@@ -92,7 +92,7 @@ export default function About() {
           >
             <div className="relative w-40 h-52 sm:w-56 sm:h-70 md:w-86 md:h-120 rounded overflow-hidden ring-4 ring-blue-900/90 dark:ring-500-30 shadow-xl">
               <Image
-                src="/images/my-photoo.jpg"
+                src="/images/my-photo.jpg"
                 alt="Jerin"
                 fill
                 className="object-cover"

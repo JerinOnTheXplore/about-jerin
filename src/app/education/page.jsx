@@ -44,38 +44,39 @@ export default function Education() {
 
         {/* timeline.. */}
         <div className="relative">
-          <div className="absolute left-5 top-0 w-1 bg-blue-400 h-full"></div>
-          <div className="flex flex-col gap-10">
-            {educationData.map((edu, i) => (
-              <motion.div
-                key={i}
-                className="flex items-start gap-6 relative pl-10"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-              >
-                <div className="absolute -left-1 top-2 bg-blue-400 rounded w-5 h-5 flex items-center justify-center">
-                  <FaGraduationCap className="text-white w-3 h-3" />
-                </div>
-                <div className="bg-base-200 rounded p-6 shadow-md hover:shadow-lg transition-all duration-300 flex-1">
-                  <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
-                  <p className="text-base-content/80 font-medium">{edu.institution}</p>
-                  {edu.year && (
-                    <p className="text-base-content/70 mt-1">
-                      <span className="font-medium">Year:</span> {edu.year} | <span className="font-medium">GPA:</span> {edu.gpa}
-                    </p>
-                  )}
-                  {edu.duration && (
-                    <p className="text-base-content/70 mt-1">
-                      <span className="font-medium">Duration:</span> {edu.duration} | <span className="font-medium">Expected Graduation:</span> {edu.expected}
-                    </p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+  <div className="absolute left-5 top-0 w-1 bg-blue-400 h-full"></div>
+  <div className="flex flex-col gap-10">
+    {educationData.map((edu, i) => (
+      <div key={i} className="flex items-start gap-6 relative pl-10">
+        <div className="absolute -left-1 top-2 bg-blue-400 rounded w-5 h-5 flex items-center justify-center">
+          <FaGraduationCap className="text-white w-3 h-3" />
         </div>
-
+        {/* shudhu edu card e motion.. */}
+        <motion.div
+          className="bg-base-200 rounded p-6 shadow-md hover:shadow-lg transition-all duration-300 flex-1"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: i * 0.2 }}
+        >
+          <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
+          <p className="text-base-content/80 font-medium">{edu.institution}</p>
+          {edu.year && (
+            <p className="text-base-content/70 mt-1">
+              <span className="font-medium">Year:</span> {edu.year} |{" "}
+              <span className="font-medium">GPA:</span> {edu.gpa}
+            </p>
+          )}
+          {edu.duration && (
+            <p className="text-base-content/70 mt-1">
+              <span className="font-medium">Duration:</span> {edu.duration} |{" "}
+              <span className="font-medium">Expected Graduation:</span> {edu.expected}
+            </p>
+          )}
+        </motion.div>
+      </div>
+    ))}
+  </div>
+</div>
         {/* note.. */}
         <div className="mt-10 text-base-content/70 text-sm leading-relaxed text-center">
           <p>

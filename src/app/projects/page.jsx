@@ -39,7 +39,7 @@ export default function Projects() {
         >
           Projects
         </motion.h2>
-        <div className="w-24 sm:w-36 md:w-48 h-1 bg-blue-400 mx-auto rounded mt-4"></div>
+        <div className="w-36 sm:w-36 md:w-46 h-1 bg-blue-400 mx-auto rounded mt-4"></div>
         <p className="text-lg text-base-content/70 pt-4">
           A glimpse of the real-world projects I’ve built.
         </p>
@@ -48,7 +48,7 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
-              className="group relative bg-base-200 pb-8 md:pb-3 rounded shadow-lg cursor-pointer overflow-hidden"
+              className="group relative bg-base-300 pb-8 md:pb-3 rounded shadow cursor-pointer overflow-hidden"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1 }}
@@ -67,8 +67,8 @@ export default function Projects() {
               </Slider>
 
               {/* overlay for large screens only */}
-              <div className="absolute inset-0 hidden lg:flex bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 items-center justify-center">
-                <button className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-6">
+              <div className="absolute inset-0 hidden lg:flex bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 items-center justify-center">
+                <button className="btn bg-base-100 text-base-content px-6">
                   View Details
                 </button>
               </div>
