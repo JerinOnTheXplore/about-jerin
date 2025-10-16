@@ -15,13 +15,13 @@ export default function Education() {
       degree: "HSC",
       institution: "Begum Badrunnesa Govt. Girls College",
       year: "2020",
-      gpa: "5.00",
+      
     },
     {
       degree: "SSC",
       institution: "Kamrunnesa Govt. Girls High School",
       year: "2018",
-      gpa: "5.00",
+      
     },
   ];
 
@@ -40,7 +40,7 @@ export default function Education() {
         >
           Education
         </motion.h2>
-        <div className="w-20 sm:w-40 md:w-56 h-1 bg-blue-400 mx-auto rounded mb-12"></div>
+        <div className="w-40 sm:w-40 md:w-56 h-1 bg-blue-400 mx-auto rounded mb-12"></div>
 
         {/* timeline.. */}
         <div className="relative">
@@ -62,8 +62,7 @@ export default function Education() {
           <p className="text-base-content/80 font-medium">{edu.institution}</p>
           {edu.year && (
             <p className="text-base-content/70 mt-1">
-              <span className="font-medium">Year:</span> {edu.year} |{" "}
-              <span className="font-medium">GPA:</span> {edu.gpa}
+              <span className="font-medium">Year:</span> {edu.year} 
             </p>
           )}
           {edu.duration && (

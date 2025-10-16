@@ -27,7 +27,7 @@
     "learnings": "Learned Next.js server & client component mix, Firebase auth, MongoDB integration, and Stripe payments.",
     "tech": ["Next.js", "React", "Firebase", "MongoDB", "TailwindCSS", "Stripe"],
     "github": "https://github.com/JerinOnTheXplore/next-base",
-    "live": "https://github.com/JerinOnTheXplore/LibraNova-Next-Js-project-"
+    "live": "https://libra-nova-next-js-project.vercel.app/"
   },
   {
     "id": 2,

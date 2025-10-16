@@ -52,7 +52,7 @@ export default function Skills() {
           {Object.entries(skills).map(([category, items], idx) => (
             <motion.div
               key={idx}
-              className="bg-base-200 rounded p-6 shadow-md flex-1"
+              className="bg-base-300 rounded p-6 shadow-md flex-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.2 }}
