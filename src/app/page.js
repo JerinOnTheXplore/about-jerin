@@ -12,10 +12,10 @@ import Loader from "../../components/Loader";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(()=>{
-    const timer = setTimeout(()=> setLoading(false),2500);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 800); 
     return () => clearTimeout(timer);
-  },[]);
+  }, []);
 
   if (loading) return <Loader/>;
   return (
