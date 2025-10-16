@@ -11,13 +11,13 @@ export default function Loader() {
   useEffect(() => {
     const shapes = ["circle", "square", "triangle"]; //shape er array..
     let index = 0;
-//interval diye shape change kora hochche proti 700 mili second e...
+//interval diye shape change kora hochche proti 300 mili second e...
     const interval = setInterval(() => {
       index = (index + 1) % shapes.length;
       setShape(shapes[index]);
-    }, 700);
-//loader show korar timaer ta 3.2 sec pore hide hoy..
-    const timer = setTimeout(() => setShow(false), 3200);
+    }, 300);
+//loader show korar timaer ta 0.8 sec pore hide hoy..
+    const timer = setTimeout(() => setShow(false), 800);
 //interval r timeout remove kortese......
     return () => {
       clearInterval(interval);
