@@ -34,14 +34,14 @@ export default function Loader() {
   };
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-base-100 text-blue-900/90 dark:text-blue-500/30  z-[9999]">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-base-100 text-blue-900/90 dark:text-blue-400/40  z-[9999]">
       {/* shape animation */}
       <motion.div
         key={shape}
         variants={shapeVariants}
         animate={shape}
         transition={{ duration: 0.7, ease: "easeInOut" }}
-        className="w-16 h-16 bg-blue-500/30 dark:bg-blue-900/90"
+        className="w-16 h-16 bg-blue-900/90 dark:bg-blue-400/40"
         style={{
           clipPath:
             shape === "triangle"
