@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function About() {
   const settings = {
@@ -21,6 +23,7 @@ export default function About() {
       id="about"
       className="py-16 md:py-20 bg-base-100 text-base-content relative overflow-hidden"
     >
+      <div>
       {/* Decorative Background Text */}
       <motion.h2
         className="absolute text-[5rem] sm:text-[7rem] md:text-[12rem] font-extrabold text-base-300/10 top-10 left-1/2 -translate-x-1/2 select-none pointer-events-none"
@@ -31,7 +34,7 @@ export default function About() {
         About Me
       </motion.h2>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Heading */}
         <div className="text-center mb-12">
           <motion.h1
@@ -44,9 +47,49 @@ export default function About() {
           </motion.h1>
           <div className="w-36 sm:w-40 md:w-56 h-1 bg-blue-400 mx-auto rounded"></div>
         </div>
+       <div className=" md:hidden lg:hidden   w-full z-40 items-center justify-center bg-base-100 mb-5">
+        <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.2)]">
+          <div className="relative w-40 h-50 md:w-60 md:h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.6)] mb-6">
+            <Image
+              src="/images/my-photo.jpg"
+              alt="Jerin"
+              width={160}
+              height={160}
+              className="object-cover w-full h-full"
+            />
+          </div>
 
+          <h2 className="text-2xl font-semibold tracking-wide">
+           Jerin
+          </h2>
+          <p className="text-sm font-bold text-blue-500/60 dark:text-blue-500/90 mt-2">Frontend Developer</p>
+          <p>jerinjerin101325@gmail.com</p>
+         <hr className="border-base-content w-2/3 mt-5" />
+          <div className="mt-6 flex gap-4 text-base-content">
+          {/* social -icons */}
+                  <motion.div
+                    className="flex justify-center gap-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.6 }}
+                  >
+                    <a href="https://www.linkedin.com/in/nasrinjerin" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <FaLinkedin size={32} className="text-base-content" />
+                    </a>
+                    <a href="https://github.com/JerinOnTheXplore" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <FaGithub size={32} className="text-base-content" />
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
+                    target="_blank"
+                    rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                    <FaEnvelope size={32} className="text-base-content" />
+                    </a>
+                  </motion.div> 
+          </div> 
+        </div>
+      </div>
         {/* responsive grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3  items-center space-y-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  items-center space-y-3">
           {/* left: personal Details */}
           <motion.div
             className="w-full  h-96  sm:h-70 bg-base-300 md:h-120  p-6 sm:p-8"
@@ -81,23 +124,6 @@ export default function About() {
                 </tr>
     </tbody>
             </table>
-          </motion.div>
-
-          {/* middle: profile image */}
-          <motion.div
-            className="flex justify-center order-first lg:order-none"
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="relative w-40 h-52 sm:w-56 sm:h-70 md:w-86 md:h-120 rounded overflow-hidden ring-4 ring-blue-900/90 dark:ring-500-30 shadow-xl">
-              <Image
-                src="/images/my-photo.jpg"
-                alt="Jerin"
-                fill
-                className="object-cover"
-              />
-            </div>
           </motion.div>
 
           {/* Right: About Text Slider */}
@@ -162,6 +188,7 @@ export default function About() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >  
         </motion.div>
+      </div>
       </div>
     </section>
   );

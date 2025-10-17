@@ -1,6 +1,8 @@
+
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import ClientLayout from "./ClientLayout";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="bg-base-100"
       >
         {/* client-side layout render hocche...*/}
         <ClientLayout>{children}</ClientLayout>

@@ -53,7 +53,7 @@ export default function Contact() {
       className="min-h-screen relative flex flex-col items-center justify-center py-24 px-6 bg-base-100"
     >
       {/* Glass Panel */}
-      <div className="absolute inset-0 backdrop-blur-lg pointer-events-none rounded-3xl"></div>
+      <div className="absolute inset-0 backdrop-blur-lg pointer-events-none rounded-3xl "></div>
 
       {/* Heading */}
       <motion.div
@@ -70,7 +70,7 @@ export default function Contact() {
       </motion.div>
 
       <motion.div
-        className="relative z-10 flex flex-col lg:flex-row gap-12 w-full max-w-6xl"
+        className="relative z-10 flex flex-col lg:flex-row gap-12 w-full max-w-5xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}

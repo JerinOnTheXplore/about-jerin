@@ -53,7 +53,7 @@ export default function Education() {
         </div>
         {/* shudhu edu card e motion.. */}
         <motion.div
-          className="bg-base-200 rounded p-6 shadow-md hover:shadow-lg transition-all duration-300 flex-1"
+          className="bg-base-300 rounded p-6 hover:shadow-lg transition-all duration-300 flex-1"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: i * 0.2 }}

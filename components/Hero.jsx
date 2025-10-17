@@ -81,7 +81,7 @@ export default function Hero() {
 
         {/* social -icons */}
         <motion.div
-          className="flex justify-center gap-6 mt-8"
+          className="hidden  md:flex lg:flex justify-center gap-6 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}

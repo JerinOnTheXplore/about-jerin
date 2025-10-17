@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-blue-900/90 dark:bg-blue-500/30 text-base-content py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-evenly gap-10">
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-evenly gap-10">
         {/*quick links */}
         <div className="flex-1">
           <h3 className="text-xl text-base-content font-semibold mb-2">Quick Links</h3>
@@ -55,13 +55,15 @@ export default function Footer() {
           <p className="text-base-content text-sm mb-2">Email me directly or connect via social links:</p>
           <div className="flex gap-4 mt-2">
             <a
-              href="mailto:jerinjerin101325@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-base-content hover:text-blue-300 transition-colors"
             >
               <FaEnvelope size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/your-linkedin/"
+              href="https://www.linkedin.com/in/nasrinjerin"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base-content hover:text-blue-300 transition-colors"

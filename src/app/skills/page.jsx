@@ -26,8 +26,8 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-base-100 text-base-content min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section id="skills" className="py-20 bg-base-100 text-base-content min-h-screen ">
+      <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-2"

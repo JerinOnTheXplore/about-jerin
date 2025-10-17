@@ -2,9 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Slider from "react-slick";
+import dynamic from "next/dynamic";
 import { Dialog, DialogPanel, DialogBackdrop } from "@headlessui/react";
 import { AiOutlineClose } from "react-icons/ai"; 
+
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -30,11 +34,12 @@ export default function Projects() {
 
   return (
     <section id="projects" className="pb-36 bg-base-100 text-base-content min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-5xl mx-auto px-6 text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-bold pt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
           Projects
@@ -55,16 +60,19 @@ export default function Projects() {
               onClick={() => setSelectedProject(project)}
             >
               {/* slider inside card */}
-              <Slider {...sliderSettings} className="rounded-t-2xl">
-                {project.images.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img}
-                    alt={project.name + idx}
-                    className="w-full h-56 object-cover"
-                  />
-                ))}
-              </Slider>
+              <div className="rounded overflow-hidden">
+                <Slider {...sliderSettings}>
+                  {project.images.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={project.name + idx}
+                      className="w-full h-56 object-cover"
+                      loading="lazy"
+                    />
+                  ))}
+                </Slider>
+              </div>
 
               {/* overlay for large screens only */}
               <div className="absolute inset-0 hidden lg:flex bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 items-center justify-center">

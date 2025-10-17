@@ -1,13 +1,22 @@
 "use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { RiMenuUnfold4Fill } from "react-icons/ri"; 
-import { FaHome, FaUser, FaTools, FaGraduationCap, FaEnvelope } from "react-icons/fa"; 
+import { Tooltip } from "react-tooltip";
+import {
+  FaHome,
+  FaUser,
+  FaTools,
+  FaGraduationCap,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { GoProjectSymlink } from "react-icons/go";
 
-export default function Sidebar({ isOpen, setIsOpen }) {
-  const pathname = usePathname();
+export default function Sidebar() {
+  const [active, setActive] = useState("/");
 
   const navItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
@@ -19,68 +28,87 @@ export default function Sidebar({ isOpen, setIsOpen }) {
   ];
 
   return (
-    <>
-      {/* Mobile Menu Button */}
-      <button
-        className="md:hidden fixed left-0 top-4 z-50 bg-base-300 text-base-content px-5 py-2"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <RiMenuUnfold4Fill size={22} />
-      </button>
+    <div className="min-h-screen bg-base-100 text-base-content relative flex flex-col">
+      {/* desktop */}
+       <aside className="hidden md:flex fixed left-0 top-0 h-screen w-1/5 lg:w-1/5 z-40 items-center justify-center bg-base-100">
+        <div className="flex flex-col items-center text-center p-8 rounded-3xl px-6 backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.3)]">
+          <div className="relative w-60 h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.3)] mb-6">
+            <Image
+              src="/images/my-photo.jpg"
+              alt="Jerin"
+              width={160}
+              height={160}
+              className="object-cover w-full h-full"
+            />
+          </div>
 
-      {/* Sidebar */}
-      <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-base-200 border-r border-base-200 transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 transition-transform duration-300 z-40 flex flex-col items-center`}
-      >
-        {/* Profile */}
-        <div className="text-center mt-24">
-        <div className="w-32 h-32 mx-auto rounded-full overflow-hidden object-contain border-4 border-gray-400">
-        <Image
-         src="/images/profile.jpg"
-         alt="Jerin"
-         width={128}
-         height={128}
-         className="object-cover w-full h-full"
-        />
-        </div>
-          <h2 className="text-lg font-semibold mt-3 text-base-content">
-            Jerin
+          <h2 className="text-2xl font-semibold tracking-wide">
+           Jerin
           </h2>
-          <p className="text-sm  mb-4 text-base-content">
-            Frontend Developer
-          </p>
-          <hr className="border-gray-300 dark:border-gray-700 w-full mx-auto mb-6" />
+          <p className="text-sm font-bold text-blue-500/60 dark:text-blue-500/90 mt-2">Frontend Developer</p>
+          <p>jerinjerin101325@gmail.com</p>
+         <hr className="border-base-content w-2/3 mt-5" />
+          <div className="mt-6 flex gap-4 text-base-content">
+          {/* social -icons */}
+                  <div
+                    className="flex justify-center gap-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.6 }}
+                  >
+                    <a href="https://www.linkedin.com/in/nasrinjerin" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <FaLinkedin size={32} className="text-base-content" />
+                    </a>
+                    <a href="https://github.com/JerinOnTheXplore" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <FaGithub size={32} className="text-base-content" />
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
+                    target="_blank"
+                    rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                    <FaEnvelope size={32} className="text-base-content" />
+                    </a>
+                  </div> 
+          </div> 
         </div>
-
-        {/* Nav Links */}
-        <nav className="flex flex-col w-full px-6 space-y-2">
-          {navItems.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`flex items-center gap-3 justify-center py-2 px-4 rounded text-center font-medium transition-colors duration-200 ${
-                  active
-                    ? "bg-blue-900/90 dark:bg-blue-500/30 text-base-content"
-                    : "text-base-content hover:bg-gray-200 dark:hover:bg-gray-600"
-                }`}
-              >
-                <span className="text-lg">{item.icon}</span>
-                {item.name}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="flex-grow"></div>
-        <p className="text-xs  text-base-content mb-4">
-          © {new Date().getFullYear()} Jerin
-        </p>
       </aside>
-    </>
+      {/* RIGHT FIXED NAVBAR (Desktop) */}
+      <nav className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-blue-900/90 dark:bg-blue-500/30 text-base-content rounded-2xl shadow-lg p-3 space-y-3 z-60">
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            onClick={() => setActive(item.href)}
+            data-tooltip-id="nav-tooltip"
+            data-tooltip-content={item.name}
+            className={`flex items-center justify-center w-12 h-12 rounded-full transition-all ${
+              active === item.href
+                ? "bg-blue-400/90 scale-80 shadow-md"
+                : "hover:bg-blue-500/70"
+            }`}
+          >
+            <span className="text-lg">{item.icon}</span>
+          </Link>
+        ))}
+      </nav>      
+      {/* MOBILE NAVBAR (Top Fixed Rounded) */}
+      <nav className="md:hidden fixed top-3 left-1/2 -translate-x-1/2 flex justify-around bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-2 py-2 rounded-2xl shadow-lg w-[90%] max-w-sm z-60">
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            onClick={() => setActive(item.href)}
+            data-tooltip-id="nav-tooltip"
+            data-tooltip-content={item.name}
+            className={`flex items-center justify-center w-12 h-12 rounded-full transition-all ${
+              active === item.href
+                ? "bg-blue-400/90 scale-80 shadow-md"
+                : "hover:bg-blue-500/70"
+            }`}
+          >
+            <span className="text-lg">{item.icon}</span>
+          </Link>
+        ))}
+      </nav>
+    </div>
   );
 }
