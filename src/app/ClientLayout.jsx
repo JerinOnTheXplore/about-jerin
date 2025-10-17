@@ -13,28 +13,33 @@ export default function ClientLayout({ children }) {
   return (
     <ThemeProvider>
       <div className="min-h-screen flex relative">
+        {/* Sidebar */}
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
+        {/* Main content */}
         <main
-          className={`flex-1 transition-all duration-300 ${
-            isOpen ? "blur-sm sm:blur-0" : ""
-          } ml-0 md:ml-64`}
+          className={`flex-1 transition-all duration-300 
+          ${
+            "w-full lg:ml-[20%]"
+          }`}
         >
           {children}
+
           <Tooltip
-        id="nav-tooltip"
-        place="bottom"
-        style={{
-          backgroundColor: "#1E40AF",
-          color: "#fff",
-          borderRadius: "6px",
-          fontSize: "12px",
-        }}
-      />
+            id="nav-tooltip"
+            place="bottom"
+            style={{
+              backgroundColor: "#1E40AF",
+              color: "#fff",
+              borderRadius: "6px",
+              fontSize: "12px",
+            }}
+          />
         </main>
 
+        {/* Theme toggle button */}
         <div className="fixed top-6 right-6 z-50">
-          <ThemeToggle/>
+          <ThemeToggle />
         </div>
       </div>
     </ThemeProvider>

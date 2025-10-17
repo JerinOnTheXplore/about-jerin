@@ -30,7 +30,7 @@ export default function Sidebar() {
   return (
     <div className="min-h-screen bg-base-100 text-base-content relative flex flex-col">
       {/* desktop */}
-       <aside className="hidden md:flex fixed left-0 top-0 h-screen w-1/5 lg:w-1/5 z-40 items-center justify-center bg-base-100">
+       <aside className="hidden md:hidden lg:flex fixed left-0 top-0 h-screen w-1/5 lg:w-1/5 z-40 items-center justify-center bg-base-100">
         <div className="flex flex-col items-center text-center p-8 rounded-3xl px-6 backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.3)]">
           <div className="relative w-60 h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.3)] mb-6">
             <Image
