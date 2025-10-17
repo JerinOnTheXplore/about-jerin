@@ -36,7 +36,7 @@ export default function Projects() {
     <section id="projects" className="pb-36 bg-base-100 text-base-content min-h-screen">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold pt-12"
+          className="text-4xl md:text-5xl font-bold pt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
