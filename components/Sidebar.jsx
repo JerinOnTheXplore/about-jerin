@@ -71,8 +71,8 @@ export default function Sidebar() {
           </div> 
         </div>
       </aside>
-      {/* RIGHT FIXED NAVBAR (Desktop) */}
-      <nav className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-blue-900/90 dark:bg-blue-500/30 text-base-content rounded-2xl shadow-lg p-3 space-y-3 z-60">
+      {/* Desktop */}
+      <nav className="hidden md:hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-blue-900/90 dark:bg-blue-500/30 text-base-content rounded-2xl shadow-lg p-3 space-y-3 z-60">
         {navItems.map((item) => (
           <Link
             key={item.name}
@@ -90,8 +90,8 @@ export default function Sidebar() {
           </Link>
         ))}
       </nav>      
-      {/* MOBILE NAVBAR (Top Fixed Rounded) */}
-      <nav className="md:hidden fixed top-3 left-1/2 -translate-x-1/2 flex justify-around bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-2 py-2 rounded-2xl shadow-lg w-[90%] max-w-sm z-60">
+      {/* Top Fixed Rounded */}
+      <nav className="lg:hidden fixed top-3 left-1/2 -translate-x-1/2 flex justify-around bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-2 py-2 rounded-2xl shadow-lg w-[90%] max-w-sm z-60">
         {navItems.map((item) => (
           <Link
             key={item.name}

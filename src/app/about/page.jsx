@@ -49,7 +49,7 @@ export default function About() {
         </div>
        <div className=" lg:hidden   w-full z-40 items-center justify-center bg-base-100 mb-5">
         <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.2)]">
-          <div className="relative w-40 h-50 md:w-60 md:h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.6)] mb-6">
+          <div className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.6)] mb-6">
             <Image
               src="/images/my-photo.jpg"
               alt="Jerin"
