@@ -119,7 +119,7 @@ export default function Projects() {
             >
               {/* Close button */}
               <button
-                className="absolute top-4 right-4 text-gray-500 hover:text-base-content"
+                className="absolute top-12 right-4 text-gray-500 hover:text-base-content"
                 onClick={() => setSelectedProject(null)}
               >
                 <AiOutlineClose className="w-6 h-6" />
