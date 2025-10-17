@@ -27,8 +27,9 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-base-100">
-      {/*  onlyclient-side e bubble render hhoy... */}
+    <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-base-100 pt-2 sm:pt-20">
+      <div className="max-w-5xl mx-auto">
+       {/*  onlyclient-side e bubble render hhoy... */}
       {bubbles.length > 0 &&
         bubbles.map((b, i) => (
           <motion.div
@@ -106,6 +107,7 @@ export default function Hero() {
           >
             Download Resume
           </a>
+      </div>
     </section>
   );
 }
