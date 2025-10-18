@@ -45,11 +45,11 @@ export default function About() {
           >
             About Me
           </motion.h1>
-          <div className="w-36 sm:w-40 md:w-56 h-1 bg-blue-400 mx-auto rounded"></div>
+          <div className="w-36 sm:w-40 md:w-56 h-1 bg-[#1E40AE]/30 mx-auto rounded"></div>
         </div>
        <div className=" lg:hidden   w-full z-40 items-center justify-center bg-base-100 mb-5">
-        <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
-          <div className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.1)] mb-6">
+        <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-[#1E40AE]/30 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
+          <div className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden  shadow-[0_0_20px_rgba(59,130,246,0.1)] mb-6">
             <Image
               src="/images/my-photo.jpg"
               alt="Jerin"
@@ -62,7 +62,7 @@ export default function About() {
           <h2 className="text-2xl font-semibold tracking-wide">
            Jerin
           </h2>
-          <p className="text-sm font-bold text-blue-500/60 dark:text-blue-500/90 mt-2">Frontend Developer</p>
+          <p className="text-sm font-bold text-[#1E40AE]/90  mt-2">Frontend Developer</p>
           <p>jerinjerin101325@gmail.com</p>
          <hr className="border-base-content w-2/3 mt-5" />
           <div className="mt-6 flex gap-4 text-base-content">
@@ -97,7 +97,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-blue-500/30 dark:text-blue-700/90">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#1E40AE]/90">
               Personal Details
             </h3>
             <table className="w-full text-base sm:text-base leading-loose">
@@ -137,7 +137,7 @@ export default function About() {
               <div>
                 <p className="leading-relaxed text-sm sm:text-base md:text-lg">
   I’m a passionate{" "}
-  <span className="font-bold text-blue-500/30 dark:text-blue-700/90">
+  <span className="font-bold text-[#1E40AE]/90">
     Frontend Developer
   </span>
   , dedicated to crafting visually engaging and highly functional web experiences.  

@@ -32,7 +32,7 @@ export default function Sidebar() {
       {/* desktop */}
        <aside className="hidden md:hidden lg:flex fixed left-0 top-0 h-screen w-1/5 lg:w-1/5 z-40 items-center justify-center bg-base-100">
         <div className="flex flex-col items-center text-center p-8 rounded-3xl px-6 backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
-          <div className="relative w-60 h-70 rounded-3xl overflow-hidden border-[3px] border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.1)] mb-6">
+          <div className="relative w-60 h-70 rounded-3xl overflow-hidden  border-blue-400  mb-6">
             <Image
               src="/images/my-photo.jpg"
               alt="Jerin"
@@ -45,7 +45,7 @@ export default function Sidebar() {
           <h2 className="text-2xl font-semibold tracking-wide">
            Jerin
           </h2>
-          <p className="text-sm font-bold text-blue-500/60 dark:text-blue-500/90 mt-2">Frontend Developer</p>
+          <p className="text-sm font-bold text-[#1E40AE]/70 mt-2">Frontend Developer</p>
           <p>jerinjerin101325@gmail.com</p>
          <hr className="border-base-content w-2/3 mt-5" />
           <div className="mt-6 flex gap-4 text-base-content">
@@ -72,7 +72,7 @@ export default function Sidebar() {
         </div>
       </aside>
       {/* Desktop */}
-      <nav className="hidden md:hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-blue-900/90 dark:bg-blue-500/30 text-base-content rounded-2xl shadow-lg p-3 space-y-3 z-60">
+      <nav className="hidden md:hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-[#1E40AE]/30 text-base-content rounded-2xl shadow-lg p-3 space-y-3 z-60">
         {navItems.map((item) => (
           <Link
             key={item.name}
@@ -82,8 +82,8 @@ export default function Sidebar() {
             data-tooltip-content={item.name}
             className={`flex items-center justify-center w-12 h-12 rounded-full transition-all ${
               active === item.href
-                ? "bg-blue-400/90 scale-80 shadow-md"
-                : "hover:bg-blue-500/70"
+                ? "bg-[#1E40AE]/70 scale-80 shadow-md"
+                : "hover:bg-[#1E40AE]/30"
             }`}
           >
             <span className="text-lg">{item.icon}</span>
@@ -91,7 +91,7 @@ export default function Sidebar() {
         ))}
       </nav>      
       {/* Top Fixed Rounded */}
-      <nav className="lg:hidden fixed top-3 left-1/2 -translate-x-1/2 flex justify-around bg-blue-900/90 dark:bg-blue-500/30 text-base-content px-2 py-2 rounded-2xl shadow-lg w-[90%] max-w-sm z-60">
+      <nav className="lg:hidden fixed top-3 left-1/2 -translate-x-1/2 flex justify-around bg-[#1E40AE]/30 text-base-content px-2 py-2 rounded-2xl shadow-lg w-[90%] max-w-sm z-70">
         {navItems.map((item) => (
           <Link
             key={item.name}
@@ -101,8 +101,8 @@ export default function Sidebar() {
             data-tooltip-content={item.name}
             className={`flex items-center justify-center w-12 h-12 rounded-full transition-all ${
               active === item.href
-                ? "bg-blue-400/90 scale-80 shadow-md"
-                : "hover:bg-blue-500/70"
+                ? "bg-[#1E40AE]/70 scale-80 shadow-md"
+                : "hover:bg-[#1E40AE]/30"
             }`}
           >
             <span className="text-lg">{item.icon}</span>

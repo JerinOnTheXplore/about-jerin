@@ -63,7 +63,7 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-4xl md:text-5xl font-bold text-base-content mb-2">Get in Touch</h2>
-        <div className="w-56 sm:w-56 md:w-70 h-1 bg-blue-400 mx-auto rounded mb-12"></div>
+        <div className="w-56 sm:w-56 md:w-70 h-1 bg-[#1E40AE]/30 mx-auto rounded mb-12"></div>
         <p className="text-lg md:text-xl text-base-content dark:text-gray/90">
           Feel free to reach out for collaborations, questions, or just to say hi!
         </p>
@@ -116,7 +116,7 @@ export default function Contact() {
             required
           ></textarea>
 
-          <button className="btn bg-blue-900/90 dark:bg-blue-500/30 text-base-content font-semibold w-full shadow-lg transition-all duration-300">
+          <button className="btn bg-[#1E40AE]/30 text-base-content font-semibold w-full shadow-lg transition-all duration-300">
             Send Message
           </button>
 
@@ -132,7 +132,7 @@ export default function Contact() {
         </form>
 
         {/* Direct Contact Options */}
-        <div className="flex-1 flex flex-col justify-center gap-6 bg-blue-900/90 dark:bg-blue-500/40 p-10 rounded shadow backdrop-blur-lg  transition-all duration-500">
+        <div className="flex-1 flex flex-col justify-center gap-6 bg-[#1E40AE]/20 p-10 rounded shadow backdrop-blur-lg  transition-all duration-500">
           <h3 className="text-2xl font-semibold text-center text-base-content mb-4">Direct Contact</h3>
           <p className="text-center text-base-content mb-4">
             Alternatively, you can reach me via these platforms:

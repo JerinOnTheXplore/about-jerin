@@ -29,8 +29,8 @@ export default function ClientLayout({ children }) {
             id="nav-tooltip"
             place="bottom"
             style={{
-              backgroundColor: "#2563EA",
-              color: "#fff",
+              backgroundColor: "#1E40AE]/70",
+              color: "#ffff",
               borderRadius: "6px",
               fontSize: "12px",
             }}
