@@ -28,9 +28,9 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen bg-base-100 text-base-content py-20 flex items-center justify-center"
+      className=" bg-base-100 text-base-content py-12 flex items-center justify-center"
     >
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6 ">
         {/* heading.. */}
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-2"

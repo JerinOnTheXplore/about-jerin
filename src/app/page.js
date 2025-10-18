@@ -19,7 +19,7 @@ export default function Home() {
 
   if (loading) return <Loader/>;
   return (
-    <div className="min-h-screen bg-base-100 text-base-content">
+    <div className="min-h-screen bg-base-100 text-base-content" id="home">
       <Hero/>
       <About/>
       <Skills/>

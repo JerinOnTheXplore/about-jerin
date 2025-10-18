@@ -33,7 +33,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="pb-36 bg-base-100 text-base-content min-h-screen">
+    <section id="projects" className="pb-10 bg-base-100 text-base-content min-h-screen">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-bold pt-20"

@@ -103,7 +103,7 @@ export default function Hero() {
        <a
             href="/resume.pdf"
             download
-            className="btn bg-blue-400/80 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
+            className="btn bg-blue-400/60 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
           >
             Download Resume
           </a>

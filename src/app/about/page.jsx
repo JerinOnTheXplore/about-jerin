@@ -21,7 +21,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-16 md:py-20 bg-base-100 text-base-content relative overflow-hidden"
+      className="py-12 md:py-16 bg-base-100 text-base-content relative overflow-hidden"
     >
       <div>
       {/* Decorative Background Text */}

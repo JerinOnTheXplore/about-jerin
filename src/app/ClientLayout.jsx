@@ -4,8 +4,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import ThemeToggle from "../../components/ThemeToggle";
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
+
 
 export default function ClientLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,17 +23,6 @@ export default function ClientLayout({ children }) {
           }`}
         >
           {children}
-
-          <Tooltip
-            id="nav-tooltip"
-            place="bottom"
-            style={{
-              backgroundColor: "#1E40AE]/70",
-              color: "#ffff",
-              borderRadius: "6px",
-              fontSize: "12px",
-            }}
-          />
         </main>
 
         {/* Theme toggle button */}
