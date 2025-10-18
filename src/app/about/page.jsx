@@ -45,10 +45,10 @@ export default function About() {
           >
             About Me
           </motion.h1>
-          <div className="w-36 sm:w-40 md:w-56 h-1 bg-[#1E40AE]/90 mx-auto rounded"></div>
+          <div className="w-36 sm:w-40 md:w-56 h-1 bg-blue-400/80 mx-auto rounded"></div>
         </div>
        <div className=" lg:hidden   w-full z-40 items-center justify-center bg-base-100 mb-5">
-        <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-[#1E40AE]/30 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
+        <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-blue-400/80 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
           <div className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden  shadow-[0_0_20px_rgba(59,130,246,0.1)] mb-6">
             <Image
               src="/images/my-photo.jpg"
@@ -62,7 +62,7 @@ export default function About() {
           <h2 className="text-2xl font-semibold tracking-wide">
            Jerin
           </h2>
-          <p className="text-sm font-bold text-[#1E40AE]/90  mt-2">Frontend Developer</p>
+          <p className="text-sm font-bold text-blue-400/80 mt-2">Frontend Developer</p>
           <p>jerinjerin101325@gmail.com</p>
          <hr className="border-base-content w-2/3 mt-5" />
           <div className="mt-6 flex gap-4 text-base-content">
@@ -92,40 +92,37 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  items-center space-y-3">
           {/* left: personal Details */}
           <motion.div
-            className="w-full  h-96  sm:h-70 bg-base-300 md:h-120  p-6 sm:p-8"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-blue-400">
-              Personal Details
-            </h3>
-            <table className="w-full text-base sm:text-base leading-loose">
-              <tbody>
-                <tr>
-                  <td className="font-semibold pr-3 sm:pr-4">Full Name:</td>
-                  <td>Mst. Nasrin Howlader Jerin</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold pr-3 sm:pr-4">Email:</td>
-                  <td className="break-all">jerinjerin101325@gmail.com</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold pr-3 sm:pr-4">Nationality:</td>
-                  <td>Bangladeshi</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold pr-3 sm:pr-4">Languages:</td>
-                  <td>English, Bangla</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold pr-3 sm:pr-4">Address:</td>
-                  <td>Dhaka, Bangladesh</td>
-                </tr>
-    </tbody>
-            </table>
-          </motion.div>
-
+  className="w-full h-auto sm:h-120 bg-base-300 p-6 sm:p-8"
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <h3 className="text-lg sm:text-xl font-semibold mb-4 text-blue-400/80">
+    Personal Details
+  </h3>
+  <div className="w-full text-base sm:text-base leading-loose space-y-2">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+      <span className="font-semibold">Full Name:</span>
+      <span>Mst. Nasrin Howlader Jerin</span>
+    </div>
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+      <span className="font-semibold">Email:</span>
+      <span className="break-all">jerinjerin101325@gmail.com</span>
+    </div>
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+      <span className="font-semibold">Nationality:</span>
+      <span>Bangladeshi</span>
+    </div>
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+      <span className="font-semibold">Languages:</span>
+      <span>English, Bangla</span>
+    </div>
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+      <span className="font-semibold">Address:</span>
+      <span>Dhaka, Bangladesh</span>
+    </div>
+  </div>
+</motion.div>
           {/* Right: About Text Slider */}
           <motion.div
             className="w-full  h-96  sm:h-70 bg-base-300 md:h-120 rounded p-6 sm:p-8 shadow-md"
@@ -137,7 +134,7 @@ export default function About() {
               <div>
                 <p className="leading-relaxed text-sm sm:text-base md:text-lg">
   I’m a passionate{" "}
-  <span className="font-bold text-blue-400">
+  <span className="font-bold text-blue-400/80">
     Frontend Developer
   </span>
   , dedicated to crafting visually engaging and highly functional web experiences.  
@@ -159,7 +156,7 @@ export default function About() {
   turned into something much deeper.  
   <br />
   Over time, that early curiosity evolved into a genuine passion for creating{" "}
-  <span className="font-semibold text-blue-400">scalable, maintainable, and user-centric applications</span>. 
+  <span className="font-semibold text-blue-400/80">scalable, maintainable, and user-centric applications</span>. 
   Today, I see coding not just as a skill, but as a creative way to design meaningful solutions 
   that make technology feel simple and human.
 </p>

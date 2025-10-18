@@ -34,7 +34,7 @@ export default function Hero() {
         bubbles.map((b, i) => (
           <motion.div
             key={i}
-            className="absolute z-80 rounded-full bg-[#1E40AE]/50 blur-xs "
+            className="absolute z-80 rounded-full bg-blue-400/50 blur-xs "
             style={{
               left: `${b.x}%`,
               bottom: "-10px",
@@ -67,7 +67,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hi, I’m <span className="text-[#1E40AE]/90">Jerin</span>
+          Hi, I’m <span className="text-blue-400/80">Jerin</span>
         </motion.h1>
 
         <motion.p
@@ -88,22 +88,22 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <a href="https://www.linkedin.com/in/nasrinjerin" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-            <FaLinkedin size={32} className="text-[#1E40AE]/90" />
+            <FaLinkedin size={32} className="text-blue-400/80" />
           </a>
           <a href="https://github.com/JerinOnTheXplore" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-            <FaGithub size={32} className="text-[#1E40AE]/90" />
+            <FaGithub size={32} className="text-blue-400/80" />
           </a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jerinjerin101325@gmail.com&su=Hello%20Jerin&"
           target="_blank"
           rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-          <FaEnvelope size={32} className="text-[#1E40AE]/90" />
+          <FaEnvelope size={32} className="text-blue-400/80" />
           </a>
         </motion.div>
       </div>
        <a
             href="/resume.pdf"
             download
-            className="btn bg-[#1E40AE]/60 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
+            className="btn bg-blue-400/80 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
           >
             Download Resume
           </a>

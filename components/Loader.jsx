@@ -41,7 +41,7 @@ export default function Loader() {
         variants={shapeVariants}
         animate={shape}
         transition={{ duration: 0.7, ease: "easeInOut" }}
-        className="w-16 h-16 bg-[#1E40AE]/60"
+        className="w-16 h-16 bg-blue-400/80"
         style={{
           clipPath:
             shape === "triangle"

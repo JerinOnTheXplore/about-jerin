@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#1E40AE]/30 text-base-content py-12 px-6">
+    <footer className="relative bg-blue-400/40 text-base-content py-12 px-6">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-evenly gap-10">
         {/*quick links */}
         <div className="flex-1">
@@ -90,7 +90,7 @@ export default function Footer() {
       {/* top button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-[#1E40AE]/50 text-white p-3 rounded-full shadow-lg transition-all z-50"
+        className="fixed bottom-6 right-6 bg-blue-400/50 text-white p-3 rounded-full shadow-lg transition-all z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >

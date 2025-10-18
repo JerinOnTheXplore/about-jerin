@@ -44,7 +44,7 @@ export default function Projects() {
         >
           Projects
         </motion.h2>
-        <div className="w-36 sm:w-36 md:w-46 h-1 bg-[#1E40AE]/90 mx-auto rounded mt-4"></div>
+        <div className="w-36 sm:w-36 md:w-46 h-1 bg-blue-400/80 mx-auto rounded mt-4"></div>
         <p className="text-lg text-base-content/70 pt-4">
           A glimpse of the real-world projects I’ve built.
         </p>
@@ -186,7 +186,7 @@ export default function Projects() {
                     href={selectedProject.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn bg-[#1E40AE]/30 text-base-content px-6"
+                    className="btn bg-blue-400/80 text-base-content px-6"
                   >
                     Live Demo
                   </a>
