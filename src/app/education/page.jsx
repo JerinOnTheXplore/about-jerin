@@ -28,7 +28,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className=" bg-base-100 text-base-content py-12 flex items-center justify-center"
+      className=" bg-base-100 text-base-content pt-20 flex items-center justify-center"
     >
       <div className="max-w-5xl mx-auto px-6 ">
         {/* heading.. */}

@@ -39,7 +39,7 @@ export default function Loader() {
   };
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-base-100 dark:bg-gray-900 z-[9999]">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-base-100 dark:bg-gray-100 z-[9999]">
       {/* shape animation */}
       <motion.div
         key={shape}

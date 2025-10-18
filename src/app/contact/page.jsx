@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className=" relative flex flex-col items-center justify-center py-16 px-6 bg-base-100"
+      className=" relative flex flex-col items-center justify-center py-20 px-6 bg-base-100"
     >
       {/* Glass Panel */}
       <div className="absolute inset-0 backdrop-blur-lg pointer-events-none rounded-3xl "></div>
