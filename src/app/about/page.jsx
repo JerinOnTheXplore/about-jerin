@@ -45,7 +45,7 @@ export default function About() {
           >
             About Me
           </motion.h1>
-          <div className="w-36 sm:w-40 md:w-56 h-1 bg-[#1E40AE]/30 mx-auto rounded"></div>
+          <div className="w-36 sm:w-40 md:w-56 h-1 bg-[#1E40AE]/90 mx-auto rounded"></div>
         </div>
        <div className=" lg:hidden   w-full z-40 items-center justify-center bg-base-100 mb-5">
         <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-[#1E40AE]/30 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
@@ -97,7 +97,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#1E40AE]/90">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-blue-400">
               Personal Details
             </h3>
             <table className="w-full text-base sm:text-base leading-loose">
@@ -137,7 +137,7 @@ export default function About() {
               <div>
                 <p className="leading-relaxed text-sm sm:text-base md:text-lg">
   I’m a passionate{" "}
-  <span className="font-bold text-[#1E40AE]/90">
+  <span className="font-bold text-blue-400">
     Frontend Developer
   </span>
   , dedicated to crafting visually engaging and highly functional web experiences.  
@@ -159,7 +159,7 @@ export default function About() {
   turned into something much deeper.  
   <br />
   Over time, that early curiosity evolved into a genuine passion for creating{" "}
-  <span className="font-semibold text-blue-500/30 dark:text-blue-700/90">scalable, maintainable, and user-centric applications</span>. 
+  <span className="font-semibold text-blue-400">scalable, maintainable, and user-centric applications</span>. 
   Today, I see coding not just as a skill, but as a creative way to design meaningful solutions 
   that make technology feel simple and human.
 </p>

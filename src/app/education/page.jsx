@@ -40,15 +40,15 @@ export default function Education() {
         >
           Education
         </motion.h2>
-        <div className="w-40 sm:w-40 md:w-56 h-1 bg-[#1E40AE]/30 mx-auto rounded mb-12"></div>
+        <div className="w-40 sm:w-40 md:w-56 h-1 bg-[#1E40AE]/90 mx-auto rounded mb-12"></div>
 
         {/* timeline.. */}
         <div className="relative">
-  <div className="absolute left-5 top-0 w-1 bg-[#1E40AE]/30 h-full"></div>
+  <div className="absolute left-5 top-0 w-1 bg-[#1E40AE]/90 h-full"></div>
   <div className="flex flex-col gap-10">
     {educationData.map((edu, i) => (
       <div key={i} className="flex items-start gap-6 relative pl-10">
-        <div className="absolute -left-1 top-2 bg-[#1E40AE]/30 rounded w-5 h-5 flex items-center justify-center">
+        <div className="absolute -left-1 top-2 bg-[#1E40AE]/90 rounded w-5 h-5 flex items-center justify-center">
           <FaGraduationCap className="text-white w-3 h-3" />
         </div>
         {/* shudhu edu card e motion.. */}

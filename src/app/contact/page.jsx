@@ -63,7 +63,7 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-4xl md:text-5xl font-bold text-base-content mb-2">Get in Touch</h2>
-        <div className="w-56 sm:w-56 md:w-70 h-1 bg-[#1E40AE]/30 mx-auto rounded mb-12"></div>
+        <div className="w-56 sm:w-56 md:w-70 h-1 bg-[#1E40AE]/90 mx-auto rounded mb-12"></div>
         <p className="text-lg md:text-xl text-base-content dark:text-gray/90">
           Feel free to reach out for collaborations, questions, or just to say hi!
         </p>
