@@ -28,7 +28,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-base-100 pt-2 sm:pt-20">
+    <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-base-100 pt-2 sm:pt-20 ">
       <div className="max-w-5xl mx-auto">
         {/* only client-side e bubble render hoy */}
         {bubbles.length > 0 &&
