@@ -32,7 +32,7 @@ export default function About() {
       id="about"
       className=" bg-base-100 text-base-content relative overflow-hidden"
     >
-      <div className="pt-12 md:py-16">
+      <div className="pt-16 md:py-24">
         {/* Background Heading Parallax */}
         <motion.h2
           className="absolute text-[5rem] sm:text-[7rem] md:text-[12rem] font-extrabold text-base-300/10 top-10 left-1/2 -translate-x-1/2 select-none pointer-events-none"

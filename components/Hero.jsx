@@ -135,13 +135,24 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <a
-            href="/resume.pdf"
-            download
-            className="btn bg-blue-400/50 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
-          >
-            Download Resume
-          </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+  {/* Download Resume Button */}
+  <a
+    href="/resume.pdf"
+    download
+    className="btn bg-blue-400/50 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:scale-105 transition-transform"
+  >
+    Download Resume
+  </a>
+
+  {/* explore my Works button */}
+  <a
+    href="#projects" 
+    className="btn bg-transparent border border-blue-400/60 text-blue-400/90 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:bg-blue-400/50 hover:text-base-content transition-all"
+  >
+    Explore my Works
+  </a>
+</div>
         </div>
       </div>
     </section>
