@@ -25,7 +25,7 @@ export default function About() {
   // scroll-based parallax
   const { scrollY } = useViewportScroll();
   const headingY = useTransform(scrollY, [0, 500], [0, -100]); // heading moves slower
-  const imageY = useTransform(scrollY, [0, 900], [0, -70]); // image move kore
+  
 
   return (
     <section
@@ -63,8 +63,7 @@ export default function About() {
           <div className="lg:hidden w-full z-40 items-center justify-center bg-base-100 mb-5">
             <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-blue-400/80 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
               <motion.div
-                className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.1)]"
-                style={{ y: imageY }}
+                className="relative w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-blue-400/80 shadow-[0_0_25px_rgba(59,130,246,0.3)] mx-auto"
                 initial={{ scale: 0.95, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -72,12 +71,11 @@ export default function About() {
                 <Image
                   src="/images/my-photo.jpg"
                   alt="Jerin"
-                  width={160}
-                  height={160}
-                  className="object-cover w-full h-full"
+                  fill
+                  sizes="(max-width: 768px) 176px, 224px"
+                  className="object-cover object-top"
                 />
               </motion.div>
-
               <motion.h2
                 className="text-2xl font-semibold tracking-wide"
                 initial="hidden"

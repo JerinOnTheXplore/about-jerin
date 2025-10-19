@@ -64,15 +64,17 @@ export default function Sidebar() {
       {/* left side (desktop) */}
       <aside className="hidden md:hidden lg:flex fixed left-0 top-0 h-screen w-1/5 lg:w-1/5 z-40 items-center justify-center bg-base-100">
         <div className="flex flex-col items-center text-center p-8 rounded-3xl px-6 backdrop-blur-2xl bg-base-300 border border-blue-400/20 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
-          <div className="relative w-60 h-70 rounded-3xl overflow-hidden border-blue-400/80 mb-6">
-            <Image
-              src="/images/my-photo.jpg"
-              alt="Jerin"
-              width={160}
-              height={160}
-              className="object-cover w-full h-full"
-            />
-          </div>
+          <div
+                className="relative w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-blue-400/80 shadow-[0_0_25px_rgba(59,130,246,0.3)] mx-auto"
+              >
+                <Image
+                  src="/images/my-photo.jpg"
+                  alt="Jerin"
+                  fill
+                  sizes="(max-width: 768px) 176px, 224px"
+                  className="object-cover object-top"
+                />
+              </div>
 
           <h2 className="text-2xl font-semibold tracking-wide">Jerin</h2>
           <p className="text-sm font-bold text-blue-400/80 mt-2">
