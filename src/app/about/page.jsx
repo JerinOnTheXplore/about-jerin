@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -22,18 +22,21 @@ export default function About() {
     visible: { opacity: 1, y: 0 },
   };
 
+  // scroll-based parallax
+  const { scrollY } = useViewportScroll();
+  const headingY = useTransform(scrollY, [0, 500], [0, -100]); // heading moves slower
+  const imageY = useTransform(scrollY, [0, 900], [0, -70]); // image move kore
+
   return (
     <section
       id="about"
       className="pt-20 md:py-20 bg-base-100 text-base-content relative overflow-hidden"
     >
       <div>
-        {/* Decorative Background Text */}
+        {/* Background Heading Parallax */}
         <motion.h2
           className="absolute text-[5rem] sm:text-[7rem] md:text-[12rem] font-extrabold text-base-300/10 top-10 left-1/2 -translate-x-1/2 select-none pointer-events-none"
-          initial={{ scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 0.1 }}
-          transition={{ duration: 1.2 }}
+          style={{ y: headingY }}
         >
           About Me
         </motion.h2>
@@ -60,7 +63,8 @@ export default function About() {
           <div className="lg:hidden w-full z-40 items-center justify-center bg-base-100 mb-5">
             <div className="flex flex-col items-center text-center p-8 rounded backdrop-blur-2xl bg-base-300 border border-blue-400/80 shadow-[0_0_30px_rgba(30,64,175,0.1)]">
               <motion.div
-                className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.1)] mb-6"
+                className="relative w-50 h-60 md:w-60 md:h-70 rounded-3xl overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.1)]"
+                style={{ y: imageY }}
                 initial={{ scale: 0.95, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -91,7 +95,12 @@ export default function About() {
               >
                 Frontend Developer
               </motion.p>
-              <motion.p initial="hidden" whileInView="visible" variants={textVariant} transition={{ delay: 0.3 }}>
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                variants={textVariant}
+                transition={{ delay: 0.3 }}
+              >
                 jerinjerin101325@gmail.com
               </motion.p>
 
@@ -133,38 +142,39 @@ export default function About() {
           {/* Responsive Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center space-y-3">
             {/* Left: Personal Details */}
-          <motion.div
-  className="w-full h-auto sm:h-120 p-6 sm:p-8 bg-blue-400/40 backdrop-blur-xl rounded border border-blue-400/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]"
-  initial={{ opacity: 0, x: -50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
->
-  <h3 className="text-lg sm:text-xl font-semibold mb-4 text-base-content">
-    Personal Details
-  </h3>
-  <div className="w-full text-base sm:text-base leading-loose space-y-2">
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-      <span className="font-semibold">Full Name:</span>
-      <span>Mst. Nasrin Howlader Jerin</span>
-    </div>
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-      <span className="font-semibold">Email:</span>
-      <span className="break-all">jerinjerin101325@gmail.com</span>
-    </div>
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-      <span className="font-semibold">Nationality:</span>
-      <span>Bangladeshi</span>
-    </div>
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-      <span className="font-semibold">Languages:</span>
-      <span>English, Bangla</span>
-    </div>
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-      <span className="font-semibold">Address:</span>
-      <span>Dhaka, Bangladesh</span>
-    </div>
-  </div>
-</motion.div>
+            <motion.div
+              className="w-full h-auto sm:h-120 p-6 sm:p-8 bg-blue-400/40 backdrop-blur-xl rounded border border-blue-400/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-base-content">
+                Personal Details
+              </h3>
+              <div className="w-full text-base sm:text-base leading-loose space-y-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                  <span className="font-semibold">Full Name:</span>
+                  <span>Mst. Nasrin Howlader Jerin</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                  <span className="font-semibold">Email:</span>
+                  <span className="break-all">jerinjerin101325@gmail.com</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                  <span className="font-semibold">Nationality:</span>
+                  <span>Bangladeshi</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                  <span className="font-semibold">Languages:</span>
+                  <span>English, Bangla</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                  <span className="font-semibold">Address:</span>
+                  <span>Dhaka, Bangladesh</span>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Right: Slider */}
             <motion.div
               className="w-full h-auto sm:h-120 bg-base-300 rounded p-6 sm:p-8 shadow-md"

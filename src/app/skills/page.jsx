@@ -79,6 +79,10 @@ export default function Skills() {
                 className={`rounded p-6 min-h-[300px] shadow-md ${
                   idx === 1 ? "bg-blue-400/50" : "bg-base-300"
                 }`}
+                 initial={{ opacity: 0, y: -40 }} // start below
+                 whileInView={{ opacity: 1, y: 0}} // jump up
+                viewport={{ once: false, amount: 0.3 }} // 30% visible triggers animation
+                transition={{ duration: 0.4, delay: idx * 0.2 }} // stagger effect
               >
                 <h3 className="text-xl font-semibold mb-4 text-base-content">{category}</h3>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-8 justify-items-center min-h-[250px]">
