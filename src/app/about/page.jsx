@@ -77,7 +77,7 @@ export default function About() {
                 />
               </motion.div>
               <motion.h2
-                className="text-2xl font-semibold tracking-wide"
+                className="text-2xl font-semibold tracking-wide mt-6"
                 initial="hidden"
                 whileInView="visible"
                 variants={textVariant}

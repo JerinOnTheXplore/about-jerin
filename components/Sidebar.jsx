@@ -76,7 +76,7 @@ export default function Sidebar() {
                 />
               </div>
 
-          <h2 className="text-2xl font-semibold tracking-wide">Jerin</h2>
+          <h2 className="text-2xl font-semibold tracking-wide mt-6">Jerin</h2>
           <p className="text-sm font-bold text-blue-400/80 mt-2">
             Frontend Developer
           </p>

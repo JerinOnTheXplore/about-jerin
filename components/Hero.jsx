@@ -100,9 +100,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            I’m a <span className="font-semibold">Frontend-Developer</span> who loves building modern, responsive web
-            applications using React, Node.js, Express.js, and MongoDB. I’ve also built a few projects with Next.js and
-            currently exploring it deeply.
+            I’m a <span className="font-semibold">Frontend Developer</span> who helps businesses build modern, responsive, and user-friendly websites that attract customers and boost online presence. I use tools like React, Node.js, Express.js, and MongoDB to ensure performance and reliability. Recently, I’ve been exploring Next.js to deliver even faster and more optimized web experiences.
           </motion.p>
 
           {/* social icons */}
