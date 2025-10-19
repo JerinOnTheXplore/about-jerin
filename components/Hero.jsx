@@ -28,7 +28,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-base-100 pt-2 sm:pt-20 ">
+    <section className="relative flex flex-col items-center justify-center  text-center overflow-hidden bg-base-100 pt-24 sm:pt-28 ">
       <div className="max-w-5xl mx-auto">
         {/* only client-side e bubble render hoy */}
         {bubbles.length > 0 &&
@@ -139,7 +139,7 @@ export default function Hero() {
           <a
             href="/resume.pdf"
             download
-            className="btn bg-blue-400/60 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
+            className="btn bg-blue-400/50 text-base-content px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg mt-12 hover:scale-105 transition-transform"
           >
             Download Resume
           </a>
