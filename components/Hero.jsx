@@ -24,7 +24,6 @@ export default function Hero() {
     { icon: <FaNodeJs className="text-green-500 text-3xl" />, x: "80%", y: "25%", delay: 1 },
     { icon: <SiMongodb className="text-green-600 text-3xl" />, x: "15%", y: "70%", delay: 2 },
     { icon: <SiNextdotjs className="text-base-content text-3xl" />, x: "75%", y: "75%", delay: 3 },
-    { icon: <SiExpress className="text-base-content text-3xl" />, x: "45%", y: "10%", delay: 4 },
   ];
 
   return (
