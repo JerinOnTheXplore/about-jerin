@@ -146,12 +146,19 @@ export default function Hero() {
   </a>
 
   {/* explore my Works button */}
-  <a
-    href="#projects" 
+  <button
+    onClick={() => {
+      const section = document.getElementById("projects");
+      if (section) {
+        const yOffset = -20; 
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }}
     className="btn bg-transparent border border-blue-400/60 text-blue-400/90 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded shadow-lg hover:bg-blue-400/50 hover:text-base-content transition-all"
   >
     Explore my Works
-  </a>
+  </button>
 </div>
         </div>
       </div>
