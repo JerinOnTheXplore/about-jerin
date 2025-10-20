@@ -110,7 +110,7 @@ export default function Projects() {
           className="relative z-50"
         >
           <DialogBackdrop className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
-          <div className="fixed inset-0 flex items-center justify-center p-4">
+          <div className="fixed inset-0 flex items-center justify-center p-4 mt-16">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -119,7 +119,7 @@ export default function Projects() {
             >
               {/* Close button */}
               <button
-                className="absolute top-12 right-4 text-gray-500 hover:text-base-content"
+                className="absolute top-8 right-2 text-gray-500 hover:text-base-content"
                 onClick={() => setSelectedProject(null)}
               >
                 <AiOutlineClose className="w-6 h-6" />
