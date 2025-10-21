@@ -74,7 +74,6 @@ export default function About() {
                   fill
                   sizes="(max-width: 768px) 176px, 224px"
                   className="object-cover object-top"
-                  
                 />
               </motion.div>
               <motion.h2
