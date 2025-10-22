@@ -211,6 +211,55 @@ export default function About() {
               </Slider>
             </motion.div>
           </div>
+          {/* GitHub Stats Section */}
+<motion.div
+  className="mt-12 flex flex-col sm:flex-col md:flex-row items-center justify-center gap-6 flex-wrap"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* gitHub stats */}
+  <a
+    href="https://github.com/JerinOnTheXplore"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex justify-center"
+  >
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=JerinOnTheXplore&show_icons=true&theme=transparent&count_private=true"
+      alt="GitHub Stats"
+      className="w-110 sm:w-full md:w-100 lg:w-130 rounded-lg shadow-lg"
+    />
+  </a>
+
+  {/* gitHub top languages */}
+  <a
+    href="https://github.com/JerinOnTheXplore"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex justify-center"
+  >
+    <img
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=JerinOnTheXplore&layout=compact&theme=transparent"
+      alt="Top Languages"
+      className="w-72 sm:w-full md:w-80 lg:w-96 rounded-lg shadow-lg"
+    />
+  </a>
+
+  {/* contribution graph */}
+  <a
+    href="https://github.com/JerinOnTheXplore"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex justify-center"
+  >
+    <img
+      src="https://github-readme-streak-stats.herokuapp.com/?user=JerinOnTheXplore&theme=transparent"
+      alt="GitHub Streak"
+      className="w-70 sm:w-full md:w-80 lg:w-96 rounded-lg shadow-lg"
+    />
+  </a>
+</motion.div>
         </div>
       </div>
     </section>

@@ -53,7 +53,7 @@ export default function Skills() {
   const boxShadow = `0 0 ${25 * glow}px rgba(59,130,246,${0.5 * glow})`;
 
   return (
-    <section id="skills" className="pt-20 bg-base-100 text-base-content ">
+    <section id="skills" className="pt-20 md:pt-6 bg-base-100 text-base-content">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-2">Skills</h2>
         <div className="w-24 sm:w-36 md:w-40 h-1 bg-blue-400/80 mx-auto rounded"></div>
