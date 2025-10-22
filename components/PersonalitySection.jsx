@@ -46,7 +46,7 @@ export default function PersonalitySection() {
           data-aos-delay="200"
         >
           Beyond coding, I love exploring my creative side through{" "}
-          <span className="font-semibold text-blue-400/80">journaling</span>. These hobbies help me stay detail-oriented, creative, and bring a unique perspective to my work as a developer.
+          <span className="font-semibold text-blue-400/80">journaling</span>. This hobby helps me stay detail-oriented, creative, and bring a unique perspective to my work as a developer.
         </p>
 
         {/* Images Grid */}
