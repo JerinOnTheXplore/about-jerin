@@ -211,7 +211,11 @@ export default function About() {
               </Slider>
             </motion.div>
           </div>
-          {/* GitHub Stats Section */}
+  {/* gitHub Stats Section */}
+  <p className="text-base-content/70 mb-6 max-w-2xl mx-auto mt-8 ">
+    Here’s an overview of my coding activity, favorite languages, and contribution streaks.  
+    You can check my GitHub for more projects and updates.
+  </p>
 <motion.div
   className="mt-12 flex flex-col sm:flex-col md:flex-row items-center justify-center gap-6 flex-wrap"
   initial={{ opacity: 0, y: 20 }}
