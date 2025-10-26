@@ -8,7 +8,6 @@ import Education from "./education/page";
 import Projects from "./projects/page";
 import Skills from "./skills/page";
 import Loader from "../../components/Loader";
-import PersonalitySection from "../../components/PersonalitySection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,7 +25,6 @@ export default function Home() {
       <Skills/>
       <Projects/>
       <Education/>
-      <PersonalitySection/>
       <Contact/>
       <Footer/>
     </div>
