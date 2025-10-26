@@ -8,6 +8,7 @@ import Education from "./education/page";
 import Projects from "./projects/page";
 import Skills from "./skills/page";
 import Loader from "../../components/Loader";
+import TechTimeline from "../../components/TechTimeline";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Projects/>
+      <TechTimeline/>
       <Education/>
       <Contact/>
       <Footer/>

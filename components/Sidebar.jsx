@@ -12,6 +12,7 @@ import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
+  FaClock,
 } from "react-icons/fa";
 import { GoProjectSymlink } from "react-icons/go";
 
@@ -24,6 +25,7 @@ export default function Sidebar() {
     { name: "Skills", href: "#skills", icon: <FaTools /> },
     { name: "Projects", href: "#projects", icon: <GoProjectSymlink /> },
     { name: "Education", href: "#education", icon: <FaGraduationCap /> },
+    { name: "Timeline", href: "#timeline", icon: <FaClock /> },
     { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
   ];
 
