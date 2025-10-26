@@ -105,7 +105,7 @@ export default function Skills() {
 <div
   data-aos="fade-up"
   data-aos-duration="1000"
-  className="mt-16 max-w-5xl mx-auto bg-base-300 p-6 md:p-10 rounded shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+  className="mt-16 max-w-5xl mx-auto bg-base-300 p-6 md:p-10 rounded shadow-[0_0_30px_rgba(59,130,246,0.2)]"
 >
   <h3 className="text-2xl md:text-3xl font-bold text-center mb-6">
     Achievements & Certifications

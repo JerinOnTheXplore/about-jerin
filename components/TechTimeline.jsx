@@ -36,7 +36,7 @@ const TechTimeline = () => {
       year: "2024",
       title: "JavaScript & React",
       text: "Dived deep into JavaScript fundamentals and built my first React App. Learned to manage state, handle dynamic UIs, and explore modern frontend workflows.",
-      icon: <SiJavascript className="text-yellow-400 text-3xl rounded-full" />,
+      icon: <SiJavascript className="text-yellow-400 text-3xl rounded-full"/>,
     },
     {
       year: "2025",
@@ -68,7 +68,7 @@ const TechTimeline = () => {
         </div>
 
         {/* timeline */}
-        <div className="relative border-l-4 border-blue-400/40 ml-6 md:ml-10">
+        <div className="relative border-l-4 border-blue-400/80 ml-6 md:ml-10">
           {timeline.map((item, index) => (
             <div
               key={index}
