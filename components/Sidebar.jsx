@@ -24,8 +24,8 @@ export default function Sidebar() {
     { name: "About", href: "#about", icon: <FaUser /> },
     { name: "Skills", href: "#skills", icon: <FaTools /> },
     { name: "Projects", href: "#projects", icon: <GoProjectSymlink /> },
-    { name: "Education", href: "#education", icon: <FaGraduationCap /> },
     { name: "Timeline", href: "#timeline", icon: <FaClock /> },
+    { name: "Education", href: "#education", icon: <FaGraduationCap /> },
     { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
   ];
 

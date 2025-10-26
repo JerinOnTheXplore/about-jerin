@@ -29,14 +29,14 @@ const TechTimeline = () => {
     {
       year: "2023",
       title: "The Beginning",
-      text: "Started my web development journey by learning HTML & CSS — understanding the building blocks of the web and creating simple static websites.",
+      text: "Started my web development journey by learning HTML & CSS through W3 schools — understanding the building blocks of the web and creating simple static websites.",
       icon: <FaHtml5 className="text-orange-500 text-3xl" />,
     },
     {
       year: "2024",
       title: "JavaScript & React",
       text: "Dived deep into JavaScript fundamentals and built my first React App. Learned to manage state, handle dynamic UIs, and explore modern frontend workflows.",
-      icon: <SiJavascript className="text-yellow-400 text-3xl" />,
+      icon: <SiJavascript className="text-yellow-400 text-3xl rounded-full" />,
     },
     {
       year: "2025",
