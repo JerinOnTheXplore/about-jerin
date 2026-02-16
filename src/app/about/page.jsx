@@ -91,7 +91,7 @@ export default function About() {
                 variants={textVariant}
                 transition={{ delay: 0.2 }}
               >
-                Frontend Developer
+                Junior Full Stack Developer 
               </motion.p>
               <motion.p
                 initial="hidden"

@@ -83,10 +83,12 @@ export default function Hero() {
           {/* typing animation */}
           <TypeAnimation
             sequence={[
-              "Frontend Developer", 2000,
-              "MERN Stack Learner", 2000,
-              "Exploring Next.js", 2000,
-            ]}
+  "Junior Full Stack Web Developer", 2000,
+  "React & Next.js Developer", 2000,
+  "Node.js & Express Developer", 2000,
+  "TypeScript | Prisma | PostgreSQL", 2000,
+  "PERN Stack Web Developer", 2000,
+]}
             wrapper="h2"
             speed={50}
             repeat={Infinity}
@@ -99,7 +101,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            I’m a <span className="font-semibold">Frontend Developer</span> who helps businesses build modern, responsive, and user-friendly websites that attract customers and boost online presence. I use tools like React, Node.js, Express.js, and MongoDB to ensure performance and reliability. Recently, I’ve been exploring Next.js to deliver even faster and more optimized web experiences.
+            I’m a <span className="font-semibold">Junior Full Stack Developer</span> who helps businesses build modern, responsive, and user-friendly websites that attract customers and boost online presence. I use tools like React, Next.js, Node.js, Express.js, Prisma, and PostgreSQL to ensure performance and reliability. Recently, I’ve been exploring the PERN stack to deliver even faster and more optimized web experiences.
           </motion.p>
 
           {/* social icons */}

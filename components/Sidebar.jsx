@@ -80,7 +80,7 @@ export default function Sidebar() {
 
           <h2 className="text-2xl font-semibold tracking-wide mt-6">Jerin</h2>
           <p className="text-sm font-bold text-blue-400/80 mt-2">
-            Frontend Developer
+            Junior Full Stack Developer 
           </p>
           <p>jerinjerin101325@gmail.com</p>
           <hr className="border-base-content w-2/3 mt-5" />
