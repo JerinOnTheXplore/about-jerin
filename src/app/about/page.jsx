@@ -187,7 +187,7 @@ export default function About() {
                   transition={{ duration: 0.6 }}
                 >
                   <p className="leading-relaxed text-sm sm:text-base md:text-lg">
-                    I’m a passionate <span className="font-bold text-blue-400/80">Frontend Developer</span>, dedicated to crafting visually engaging and highly functional web experiences. My core expertise lies in building dynamic and responsive interfaces with <span className="font-semibold">React</span>, managing server-side logic with <span className="font-semibold">Node.js</span> and <span className="font-semibold">Express.js</span>, and maintaining efficient data handling using <span className="font-semibold">MongoDB</span>. Recently, I’ve started exploring <span className="font-semibold">Next.js</span> to deepen my understanding of modern React frameworks, server-side rendering, and SEO-friendly development.
+                    I’m a passionate <span className="font-bold text-blue-400/80">Junior Full Stack Developer </span>, dedicated to crafting visually engaging and highly functional web experiences. My core expertise lies in building dynamic and responsive interfaces with <span className="font-semibold">React</span>, managing server-side logic with <span className="font-semibold">Node.js</span> and <span className="font-semibold">Express.js</span>, and maintaining efficient data handling using <span className="font-semibold">MongoDB</span>. Recently, I’ve started exploring <span className="font-semibold">Next.js</span> to deepen my understanding of modern React frameworks, server-side rendering, and SEO-friendly development.
                   </p>
                 </motion.div>
                 <motion.div
