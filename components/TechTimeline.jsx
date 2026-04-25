@@ -26,25 +26,25 @@ const TechTimeline = () => {
   }, []);
 
   const timeline = [
-    {
-      year: "2023",
-      title: "The Beginning",
-      text: "Started my web development journey by learning HTML & CSS through W3 schools — understanding the building blocks of the web and creating simple static websites.",
-      icon: <FaHtml5 className="text-orange-500 text-3xl" />,
-    },
-    {
-      year: "2024",
-      title: "JavaScript & React",
-      text: "Dived deep into JavaScript fundamentals and built my first React App. Learned to manage state, handle dynamic UIs, and explore modern frontend workflows.",
-      icon: <SiJavascript className="text-yellow-400 text-3xl rounded-full"/>,
-    },
-    {
-      year: "2025",
-      title: "MERN & Next.js",
-      text: "Explored full-stack development using the MERN stack — MongoDB, Express.js, React, and Node.js. Currently expanding my knowledge in Next.js and server-side rendering.",
-      icon: <SiNextdotjs className="text-base-content text-3xl" />,
-    },
-  ];
+  {
+    year: "2023",
+    title: "Foundation of Learning",
+    text: "Started building curiosity in problem-solving, self-learning habits, and basic digital tools that strengthened my analytical thinking and learning ability.",
+    icon: <FaHtml5 className="text-orange-500 text-3xl" />,
+  },
+  {
+    year: "2024",
+    title: "Analytical & Technical Growth",
+    text: "Developed interest in structured thinking, data handling, and basic programming concepts while strengthening logical reasoning and problem-solving skills.",
+    icon: <SiJavascript className="text-yellow-400 text-3xl" />,
+  },
+  {
+    year: "2025",
+    title: "Interdisciplinary Development",
+    text: "Combined academic knowledge in nutrition and public health with technical awareness, focusing on research-based and data-driven thinking for real-world understanding.",
+    icon: <SiNextdotjs className="text-base-content text-3xl" />,
+  },
+];
 
   return (
     <section
@@ -57,13 +57,11 @@ const TechTimeline = () => {
         {/* heading */}
         <div className="text-center mb-14" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-3">
-            My Learning Journey
+            My Learning & Growth Journey
           </h2>
           <div className="w-56 md:w-78 h-1 bg-blue-400/80 mx-auto rounded"></div>
           <p className="mt-4 text-base md:text-lg text-base-content/70 max-w-2xl mx-auto">
-            A quick look at how my web development journey has evolved over the
-            years — from crafting simple layouts to exploring full-stack
-            technologies.
+            A journey of continuous learning combining academic growth, analytical thinking, and technical exploration over time.
           </p>
         </div>
 

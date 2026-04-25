@@ -91,7 +91,7 @@ export default function About() {
                 variants={textVariant}
                 transition={{ delay: 0.2 }}
               >
-                Junior Full Stack Developer 
+                Aspiring Professional in Nutrition & Public Health
               </motion.p>
               <motion.p
                 initial="hidden"
@@ -187,7 +187,7 @@ export default function About() {
                   transition={{ duration: 0.6 }}
                 >
                   <p className="leading-relaxed text-sm sm:text-base md:text-lg">
-                    I’m a passionate <span className="font-bold text-blue-400/80">Junior Full Stack Developer </span>, dedicated to crafting visually engaging and highly functional web experiences. My core expertise lies in building dynamic and responsive interfaces with <span className="font-semibold">React</span>, managing server-side logic with <span className="font-semibold">Node.js</span> and <span className="font-semibold">Express.js</span>, and maintaining efficient data handling using <span className="font-semibold">MongoDB</span>. Recently, I’ve started exploring <span className="font-semibold">Next.js</span> to deepen my understanding of modern React frameworks, server-side rendering, and SEO-friendly development.
+                    I’m <span className="font-bold text-blue-400/80">an emerging professional </span>with a strong interest in nutrition, food safety, and public health, supported by growing technical skills. I am passionate about understanding the relationship between diet, food quality, and human health, while leveraging data and technology to gain meaningful insights. Alongside my academic background, I have developed skills in research, data analysis, and basic web technologies, which help me approach problems in a structured and analytical way.
                   </p>
                 </motion.div>
                 <motion.div
@@ -196,7 +196,7 @@ export default function About() {
                   transition={{ duration: 0.6 }}
                 >
                   <p className="leading-relaxed text-sm sm:text-base md:text-lg">
-                    My coding journey began quite unexpectedly — what started as a casual curiosity, watching YouTube tutorials and experimenting with small beginner projects, soon turned into something much deeper. Over time, that early curiosity evolved into a genuine passion for creating <span className="font-semibold text-blue-400/80">scalable, maintainable, and user-centric applications</span>. Today, I see coding not just as a skill, but as a creative way to design meaningful solutions that make technology feel simple and human.
+                    My journey began with curiosity in coding and problem-solving, which I explored through self-learning and small projects. Alongside this, my academic interest in <span className="font-semibold text-blue-400/80">nutrition and public health</span> grew stronger over time. Together, these experiences have helped me develop analytical thinking, structured problem-solving skills, and a balanced perspective that connects technology with scientific understanding.
                   </p>
                 </motion.div>
                 <motion.div
@@ -205,7 +205,7 @@ export default function About() {
                   transition={{ duration: 0.6 }}
                 >
                   <p className="leading-relaxed text-sm sm:text-base md:text-lg">
-                    Outside of programming, I have a deep passion for journaling and scrapbooking — activities that allow me to capture memories, organize my thoughts, and express my creativity in a tangible way. This blend of creativity and reflection helps me maintain balance in life, and I often find that the patience, attention to detail, and design sense I cultivate through these practices directly influence how I approach coding and building thoughtful, visually appealing applications.
+                    Outside of my academic and technical interests, I enjoy journaling and scrapbooking as creative outlets. They help me capture memories, organize my thoughts, and express creativity in a structured way. These practices also strengthen my patience, attention to detail, and reflective thinking, which positively influence how I approach problem-solving and learning.
                   </p>
                 </motion.div>
               </Slider>
@@ -213,8 +213,7 @@ export default function About() {
           </div>
   {/* gitHub Stats Section */}
   <p className="text-base-content/70 mb-6 max-w-2xl mx-auto mt-8 ">
-    Here’s an overview of my coding activity, favorite languages, and contribution streaks.  
-    You can check my GitHub for more projects and updates.
+    This section reflects my technical learning journey, including problem-solving practice and personal projects. It highlights my interest in structured thinking, data handling, and continuous learning. You can explore my GitHub for more learning-based projects and updates.
   </p>
 <motion.div
   className="mt-12 flex flex-col sm:flex-col md:flex-row items-center justify-center gap-6 flex-wrap"

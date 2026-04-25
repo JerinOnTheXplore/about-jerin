@@ -42,11 +42,11 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-          Projects
+          Learning & Projects
         </motion.h2>
         <div className="w-36 sm:w-36 md:w-46 h-1 bg-blue-400/80 mx-auto rounded mt-4"></div>
         <p className="text-lg text-base-content/70 pt-4">
-          A glimpse of the real-world projects I’ve built.
+          A learning-based project focused on problem-solving, logic building, and data structuring.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-12">

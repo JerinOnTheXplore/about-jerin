@@ -83,11 +83,10 @@ export default function Hero() {
           {/* typing animation */}
           <TypeAnimation
             sequence={[
-  "Junior Full Stack Web Developer", 2000,
-  "React & Next.js Developer", 2000,
-  "Node.js & Express Developer", 2000,
-  "TypeScript | Prisma | PostgreSQL", 2000,
-  "PERN Stack Web Developer", 2000,
+  "Food & Nutrition Learner", 2000,
+  "Nutrition & Food Safety Focused", 2000,
+  "Research & Data Analysis Enthusiast", 2000,
+  "Analytical Thinker", 2000,
 ]}
             wrapper="h2"
             speed={50}
@@ -101,7 +100,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            I’m a <span className="font-semibold">Junior Full Stack Developer</span> who helps businesses build modern, responsive, and user-friendly websites that attract customers and boost online presence. I use tools like React, Next.js, Node.js, Express.js, Prisma, and PostgreSQL to ensure performance and reliability. Recently, I’ve been exploring the PERN stack to deliver even faster and more optimized web experiences.
+             This portfolio includes a collection of personal projects where I explored data handling, problem-solving, and basic application development. These experiences helped me develop analytical thinking, structured problem-solving, and adaptability, which complement my academic background in Food & Nutrition.
           </motion.p>
 
           {/* social icons */}
