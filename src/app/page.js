@@ -9,6 +9,7 @@ import Projects from "./projects/page";
 import Skills from "./skills/page";
 import Loader from "../../components/Loader";
 import TechTimeline from "../../components/TechTimeline";
+import WorkExperience from "./work/page";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ export default function Home() {
     <div className="min-h-screen bg-base-100 text-base-content" id="home">
       <Hero/>
       <About/>
+      <WorkExperience/>
       <Skills/>
       <Projects/>
       <TechTimeline/>

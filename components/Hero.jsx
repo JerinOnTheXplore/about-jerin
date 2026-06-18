@@ -49,25 +49,7 @@ export default function Hero() {
                 ease: "easeInOut",
               }}
             />
-          ))}
-
-        {/* floating tech icons */}
-        {floatingIcons.map((item, index) => (
-          <motion.div
-            key={index}
-            className="absolute"
-            style={{ top: item.y, left: item.x }}
-            animate={{ y: ["0%", "-10%", "0%"] }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              delay: item.delay,
-              ease: "easeInOut",
-            }}
-          >
-            {item.icon}
-          </motion.div>
-        ))}
+          ))}        
 
         {/* hero text */}
         <div className="relative z-10 max-w-2xl px-4">
@@ -83,10 +65,9 @@ export default function Hero() {
           {/* typing animation */}
           <TypeAnimation
             sequence={[
-  "Food & Nutrition Learner", 2000,
-  "Nutrition & Food Safety Focused", 2000,
+  "Supply Chain Management Executive (Commercial)", 2000,
+  "Food & Nutrition Graduate", 2000,
   "Research & Data Analysis Enthusiast", 2000,
-  "Analytical Thinker", 2000,
 ]}
             wrapper="h2"
             speed={50}
@@ -100,7 +81,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-             This portfolio includes a collection of personal projects where I explored data handling, problem-solving, and basic application development. These experiences helped me develop analytical thinking, structured problem-solving, and adaptability, which complement my academic background in Food & Nutrition.
+I graduated in Food and Nutrition and have always been interested in learning new skills and exploring different fields. During my academic journey, I developed an interest in web development and worked on personal and team-based projects, which helped me strengthen my problem-solving, analytical thinking, and collaboration skills.
+
+Currently, I am working as a Supply Chain Management Executive, where I am gaining practical experience in import documentation, LC processing, procurement support, bank coordination, and commercial operations. At the same time, I am pursuing MSc in Food and Nutrition to further strengthen my academic foundation and professional development.
+
+I enjoy learning how business processes work and continuously expanding my knowledge across different disciplines. I believe that adaptability, continuous learning, and a positive attitude are essential for growth. My diverse experiences have taught me how to approach challenges from different perspectives and quickly adapt to new environments and responsibilities.
           </motion.p>
 
           {/* social icons */}

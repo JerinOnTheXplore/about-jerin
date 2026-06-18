@@ -91,7 +91,7 @@ export default function About() {
                 variants={textVariant}
                 transition={{ delay: 0.2 }}
               >
-                Aspiring Professional in Nutrition & Public Health
+                Commercial Executive in Supply Chain & Import Operations
               </motion.p>
               <motion.p
                 initial="hidden"
