@@ -1,94 +1,128 @@
 "use client";
+
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { FaHtml5 } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs } from "react-icons/si";
+import { FaCode, FaReact, FaBriefcase } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 const TechTimeline = () => {
   useEffect(() => {
     AOS.init({
-      duration: 900,
-      once: false,
-      offset: 120,
+      duration: 800,
+      once: true,
+      offset: 100,
       easing: "ease-in-out",
     });
-
-    // AOS  refresh kore every time jokhon scroll kora hoy or route change hoy
-    const refreshAOS = () => {
-      AOS.refresh();
-    };
-
-    window.addEventListener("scroll", refreshAOS);
-    return () => {
-      window.removeEventListener("scroll", refreshAOS);
-    };
   }, []);
 
-  const timeline = [
-  {
-    year: "2023",
-    title: "Foundation of Learning",
-    text: "Started building curiosity in problem-solving, self-learning habits, and basic digital tools that strengthened my analytical thinking and learning ability.",
-    icon: <FaHtml5 className="text-orange-500 text-3xl" />,
-  },
-  {
-    year: "2024",
-    title: "Analytical & Technical Growth",
-    text: "Developed interest in structured thinking, data handling, and basic programming concepts while strengthening logical reasoning and problem-solving skills.",
-    icon: <SiJavascript className="text-yellow-400 text-3xl" />,
-  },
-  {
-    year: "2025",
-    title: "Interdisciplinary Development",
-    text: "Combined academic knowledge in nutrition and public health with technical awareness, focusing on research-based and data-driven thinking for real-world understanding.",
-    icon: <SiNextdotjs className="text-base-content text-3xl" />,
-  },
-];
+  const timelineData = [
+    {
+      year: "2023",
+      title: "Foundations of Web Development",
+      description:
+        "Started my journey into software engineering by mastering core web technologies including HTML5, CSS3, JavaScript (ES6+), and understanding modern UI layout design principles.",
+      badge: "Core Basics",
+      icon: <FaCode className="text-orange-400 text-lg md:text-xl" />,
+    },
+    {
+      year: "2024",
+      title: "Frontend Mastery & MERN Stack",
+      description:
+        "Advanced into component-driven architecture with React.js, Tailwind CSS, and Firebase Authentication. Built several dynamic single-page web applications with Node.js and MongoDB backends.",
+      badge: "React & MERN",
+      icon: <FaReact className="text-sky-400 text-lg md:text-xl" />,
+    },
+    {
+      year: "2025",
+      title: "Next.js & Full-Stack Capabilities",
+      description:
+        "Expanded technical skill set into Next.js, TypeScript, PostgreSQL, and Prisma. Developed production-ready role-based web systems and focused on code optimization and performance.",
+      badge: "Next.js & Full-Stack",
+      icon: <SiNextdotjs className="text-base-content text-lg md:text-xl" />,
+    },
+    {
+      year: "2026 – Present",
+      title: "Commercial Operations & Tech Synergy",
+      description:
+        "Stepped into professional Executive Commercial roles handling Import Operations, LCs, and Banking Workflows, while actively engineering complex frontend dashboards and enterprise solutions.",
+      badge: "Domain Expertise",
+      icon: <FaBriefcase className="text-blue-400 text-lg md:text-xl" />,
+    },
+  ];
 
   return (
     <section
       id="timeline"
-      className="pt-24 bg-base-100 text-base-content relative overflow-hidden"
+      className="py-24 bg-base-100 text-base-content relative overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none"></div>
-
-      <div className="max-w-5xl mx-auto px-5 relative z-10">
-        {/* heading */}
-        <div className="text-center mb-14" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">
-            My Learning & Growth Journey
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        {/* Section Heading */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <span className="text-blue-400 font-semibold tracking-widest text-xs uppercase bg-blue-400/10 px-3 py-1 rounded-full border border-blue-400/20">
+            Evolution & Milestones
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 tracking-tight">
+            Learning & Growth Journey
           </h2>
-          <div className="w-56 md:w-78 h-1 bg-blue-400/80 mx-auto rounded"></div>
-          <p className="mt-4 text-base md:text-lg text-base-content/70 max-w-2xl mx-auto">
-            A journey of continuous learning combining academic growth, analytical thinking, and technical exploration over time.
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400/20 via-blue-400/80 to-blue-400/20 mx-auto rounded-full mt-4"></div>
+          <p className="mt-4 text-sm md:text-base text-base-content/70 max-w-2xl mx-auto leading-relaxed">
+            A chronological look at how my passion for Frontend Engineering evolved from basic web fundamentals into advanced full-stack capabilities and real-world corporate execution.
           </p>
         </div>
 
-        {/* timeline */}
-        <div className="relative border-l-4 border-blue-400/80 ml-6 md:ml-10">
-          {timeline.map((item, index) => (
+        {/* Timeline Container */}
+        <div className="relative border-l-2 border-blue-400/30 ml-4 sm:ml-8 md:ml-12 space-y-10">
+          {timelineData.map((item, index) => (
             <div
               key={index}
-              className="mb-12 ml-6 relative"
+              className="relative pl-6 sm:pl-8 group"
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >
-              <div className="absolute -left-10 md:-left-12 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-base-200 rounded-full border-2 border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+              {/* Timeline Bullet Node with Glow */}
+              <div className="absolute -left-[17px] sm:-left-[21px] top-1.5 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-base-200 rounded-xl border-2 border-blue-400/80 shadow-md shadow-blue-400/20 group-hover:scale-110 group-hover:border-blue-400 transition-all duration-300 z-10">
                 {item.icon}
               </div>
 
-              <div className="bg-base-300/60 backdrop-blur-lg border border-blue-400/30 rounded p-6 shadow-md hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] transition-shadow duration-300">
-                <h3 className="text-lg md:text-xl font-bold text-blue-400 mb-1">
-                  {item.year} — {item.title}
-                </h3>
-                <p className="text-sm md:text-base text-base-content/80 leading-relaxed">
-                  {item.text}
+              {/* Experience Card */}
+              <div className="bg-base-200/50 backdrop-blur-md border border-base-content/10 rounded-2xl p-5 sm:p-7 shadow-sm hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-400/10 transition-all duration-300 relative">
+                
+                {/* Header: Year, Title & Badge */}
+                <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
+                  <div>
+                    <span className="text-xs font-bold text-blue-400 tracking-wider uppercase">
+                      {item.year}
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-base-content group-hover:text-blue-400 transition-colors mt-0.5">
+                      {item.title}
+                    </h3>
+                  </div>
+                  
+                  <span className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-blue-400/10 text-blue-400 border border-blue-400/20">
+                    {item.badge}
+                  </span>
+                </div>
+
+                {/* Description Text */}
+                <p className="text-xs sm:text-sm md:text-base text-base-content/80 leading-relaxed">
+                  {item.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Bottom Closing Note */}
+        <div
+          className="mt-16 text-center text-xs sm:text-sm text-base-content/60 italic"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Continually exploring modern frameworks, performance optimization, and scalable web architecture.
+        </div>
+
       </div>
     </section>
   );
