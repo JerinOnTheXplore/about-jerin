@@ -108,7 +108,7 @@ export default function Hero() {
           <TypeAnimation
             sequence={[
               "Commercial Executive | Supply Chain Management", 2000,
-              "Foreign Trade & Import Operations Specialist", 2000,
+              "Foreign Trade & Import Operations", 2000,
               "Food & Nutrition Science Graduate", 2000,
               "Data & Research Analytics Enthusiast", 2000,
             ]}
