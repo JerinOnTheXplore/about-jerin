@@ -1,11 +1,8 @@
 "use client";
 
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import Tilt from "react-parallax-tilt";
+import React, { useRef, useEffect, useState } from "react";
+import { FaReact, FaNodeJs, FaJs, FaGithub, FaFileContract, FaBoxes, FaUniversity, FaShip,FaFileInvoiceDollar,FaFolderOpen} from "react-icons/fa";
 
-import { FaReact, FaNodeJs, FaJs, FaGithub } from "react-icons/fa";
-import { TbBrandVscode } from "react-icons/tb";
 import { 
   SiExpress, 
   SiMongodb, 
@@ -15,151 +12,102 @@ import {
   SiTypescript, 
   SiPostgresql, 
   SiPrisma,
-  SiAuth0 
+  
+
 } from "react-icons/si";
 
 export default function Skills() {
   const skills = {
-    Frontend: [
+    "Commercial & Supply Chain": [
+      { name: "Import Operations", icon: <FaShip className="text-blue-400" /> },
+      { name: "LC Processing", icon: <FaFileContract className="text-amber-400" /> },
+      { name: "Bank Coordination", icon: <FaUniversity className="text-emerald-400" /> },
+      { name: "Procurement", icon: <FaBoxes className="text-purple-400" /> },
+      { name: "PI & IMP Verification", icon: <FaFileInvoiceDollar className="text-teal-400" /> },
+      { name: "Commercial Docs", icon: <FaFolderOpen className="text-orange-400" /> },
+    ],
+    "Frontend Development": [
       { name: "React", icon: <FaReact className="text-sky-400" /> },
       { name: "Next.js", icon: <SiNextdotjs className="text-base-content" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
+      { name: "Firebase Auth", icon: <SiFirebase className="text-yellow-400" /> },
+      { name: "GitHub & VS Code", icon: <FaGithub className="text-base-content" /> },
     ],
-    Backend: [
+    "Backend & Databases": [
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
       { name: "Express.js", icon: <SiExpress className="text-base-content" /> },
       { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-      { name: "Prisma", icon: <SiPrisma className="text-teal-500" /> },
-    ],
-    "Auth & Tools": [
-      { name: "Firebase Auth", icon: <SiFirebase className="text-yellow-400" /> },
-      { name: "NextAuth", icon: <SiAuth0 className="text-blue-500" /> },
-      { name: "Better Auth", icon: <SiAuth0 className="text-purple-500" /> },
-      { name: "GitHub", icon: <FaGithub className="text-base-content" /> },
-      { name: "VS Code", icon: <TbBrandVscode className="text-blue-500" /> },
-    ],
-  };
-
-  const ref = useRef(null);
-  const [glow, setGlow] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!ref.current) return;
-      const rect = ref.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // 0 fully out of view, 1 fully visible
-      let visibility = Math.min(
-        1,
-        Math.max(0, (windowHeight - rect.top) / (rect.height + windowHeight))
-      );
-      setGlow(visibility);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initial check
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // compute box-shadow based on glow intensity
-  const boxShadow = `0 0 ${25 * glow}px rgba(59,130,246,${0.5 * glow})`;
-
-  // Function to determine grid layout based on number of items
-  const getGridClass = (itemCount) => {
-    if (itemCount === 3) return "grid-cols-2 grid-rows-2";
-    if (itemCount === 5) return "grid-cols-2 grid-rows-3";
-    if (itemCount === 6) return "grid-cols-2 grid-rows-3";
-    return "grid-cols-2";
-  };
-
-  // Function to determine if an item should span full width
-  const getItemStyle = (items, index) => {
-    if (items.length === 3 && index === 2) {
-      return { gridColumn: "1 / span 2" };
-    }
-    if (items.length === 5 && index === 4) {
-      return { gridColumn: "1 / span 2" };
-    }
-    if (items.length === 6 && index === 5) {
-      return { gridColumn: "1 / span 2" };
-    }
-    return {};
+      { name: "Prisma", icon: <SiPrisma className="text-teal-400" /> },
+    ]
+    
   };
 
   return (
-    <section id="skills" className="pt-20 md:pt-6 bg-base-100 text-base-content">
-  <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+    <section id="skills" className="py-20 bg-base-100 text-base-content">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
 
-    {/* Skills Title */}
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
-      Skills
-    </h2>
-
-    <div className="w-20 sm:w-28 md:w-40 h-1 bg-blue-400/80 mx-auto rounded"></div>
-
-    <p className="text-base sm:text-lg md:text-xl text-base-content/70 mb-8 sm:mb-12 mt-2">
-      Academic, Analytical & Technical Skills
-    </p>
-
-    {/* Skills Cards */}
-    <div className="flex flex-col lg:flex-row gap-4 md:gap-6 justify-center items-stretch">
-      
-      {Object.entries(skills).map(([category, items], idx) => (
-        <div
-          key={category}
-          className={`flex-1 rounded-lg p-4 sm:p-5 md:p-6 shadow-md flex flex-col ${
-            idx === 1 ? "bg-blue-400/20" : "bg-base-300"
-          }`}
-        >
-          <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-            {category}
-          </h3>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 flex-1">
-            {items.map((skill) => (
-              <div
-                key={skill.name}
-                className="flex flex-col items-center bg-base-100 rounded-lg p-3 shadow"
-              >
-                <div className="text-3xl sm:text-4xl">{skill.icon}</div>
-                <span className="text-xs sm:text-sm font-medium text-center">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
+        {/* Section Title */}
+        <div data-aos="fade-up">
+          <span className="text-blue-400 font-semibold tracking-widest text-xs uppercase bg-blue-400/10 px-3 py-1 rounded-full border border-blue-400/20">
+            Technical & Domain Expertise
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 tracking-tight">Skills & Capabilities</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400/20 via-blue-400/80 to-blue-400/20 mx-auto rounded-full mt-4 mb-12"></div>
         </div>
-      ))}
-    </div>
 
-    {/* Achievements Section */}
-    <div className="mt-12 sm:mt-16 max-w-5xl mx-auto bg-base-300 p-4 sm:p-6 md:p-10 rounded-lg shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+        {/* Skills Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          {Object.entries(skills).map(([category, items], idx) => (
+            <div
+              key={category}
+              className="bg-base-200/50 backdrop-blur-md rounded-2xl p-6 border border-base-content/10 shadow-sm hover:border-blue-400/50 hover:shadow-xl hover:shadow-blue-400/10 transition-all duration-300 flex flex-col justify-between"
+              data-aos="fade-up"
+              data-aos-delay={idx * 150}
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-5 pb-3 border-b border-base-content/10 text-blue-400 flex items-center justify-between">
+                  <span>{category}</span>
+                  <span className="text-xs bg-blue-400/10 text-blue-400 px-2 py-0.5 rounded font-normal border border-blue-400/20">
+                    {items.length} Skills
+                  </span>
+                </h3>
 
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">
-        Achievements & Learning Highlights
-      </h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {items.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-3 bg-base-100/70 p-3 rounded-xl border border-base-content/5 hover:border-blue-400/30 hover:translate-x-1 transition-all duration-200"
+                    >
+                      <div className="text-2xl shrink-0">{skill.icon}</div>
+                      <span className="text-sm font-medium text-base-content/90">
+                        {skill.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-      <div className="w-24 sm:w-32 md:w-48 h-1 bg-blue-400/80 mx-auto mb-6 sm:mb-8 rounded"></div>
+        {/* Learning & Domain Synthesis Summary Box */}
+        <div
+          className="mt-14 p-6 sm:p-8 rounded-2xl bg-base-200/50 border border-blue-400/20 text-left max-w-4xl mx-auto backdrop-blur-md"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <h3 className="text-xl font-bold text-base-content mb-2 flex items-center gap-2">
+  ✨ Professional Competencies & Commercial Insight
+</h3>
+          <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
+  With a strong academic background in Food & Nutrition and a transition into <strong className="text-blue-400">Foreign Trade and Commercial Operations</strong>, I hold hands-on professional experience in <strong className="text-blue-400">end-to-end Import Operations, LC Processing, and Supplier Management</strong>. My diverse background, along with prior technical exposure, equips me with a unique analytical mindset and adaptiveness in real-world corporate environments.
+</p>
+        </div>
 
-      <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-blue-400/80">
-        Web Development Certification & Technical Learning
-      </h4>
-
-      <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">
-        Completed a structured web development learning program covering modern
-        programming fundamentals, problem-solving, and application development.
-        This experience helped me build a strong foundation in logical thinking,
-        data handling, and technical understanding, which complements my academic
-        background in nutrition and public health.
-      </p>
-
-    </div>
-
-  </div>
-</section>
+      </div>
+    </section>
   );
 }
