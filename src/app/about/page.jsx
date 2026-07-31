@@ -69,8 +69,7 @@ export default function About() {
                 transition={{ duration: 0.8 }}
               >
                 <Image
-                  src="/images/portfolio-img.jpg
-                  "
+                  src="/images/portfolio-img-v2.jpg"
                   alt="Jerin"
                   fill
                   sizes="(max-width: 768px) 176px, 224px"

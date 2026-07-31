@@ -70,7 +70,7 @@ export default function Sidebar() {
                 className="relative w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-blue-400/80 shadow-[0_0_25px_rgba(59,130,246,0.3)] mx-auto"
               >
                 <Image
-                  src="/images/portfolio-img.jpg"
+                  src="/images/portfolio-img-v2.jpg"
                   alt="Jerin"
                   fill
                   sizes="(max-width: 768px) 176px, 224px"
