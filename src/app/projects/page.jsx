@@ -33,34 +33,40 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className=" bg-base-100 text-base-content ">
+    <section id="projects" className="bg-base-100 text-base-content py-12">
       <div className="max-w-5xl mx-auto px-6 text-center">
+        
+        {/* Section Heading with Commercial & Tech Focus */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold pt-20"
+          className="text-4xl md:text-5xl font-bold pt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-          Learning & Projects
+          Technical & Analytical Exposure
         </motion.h2>
+
         <div className="w-36 sm:w-36 md:w-46 h-1 bg-blue-400/80 mx-auto rounded mt-4"></div>
-        <p className="text-lg text-base-content/70 pt-4">
-          A learning-based project focused on problem-solving, logic building, and data structuring.
+
+        {/* Updated Sub-heading Description */}
+        <p className="text-lg text-base-content/70 pt-4 max-w-3xl mx-auto leading-relaxed">
+          Applied analytical projects developed to strengthen <span className="text-blue-400 font-medium">problem-solving, process logic, and data structuring</span>—skills that directly complement digital supply chain management and commercial workflows.
         </p>
 
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-12">
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
-              className="group relative bg-base-300 pb-8 md:pb-3 rounded shadow cursor-pointer overflow-hidden"
+              className="group relative bg-base-300 pb-8 md:pb-3 rounded shadow cursor-pointer overflow-hidden border border-base-200 hover:border-blue-400/50 transition-all duration-300"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1 }}
               onClick={() => setSelectedProject(project)}
             >
-              {/* slider inside card */}
-              <div className="rounded overflow-hidden">
+              {/* Slider inside card */}
+              <div className="rounded overflow-hidden relative">
                 <Slider {...sliderSettings}>
                   {project.images.map((img, idx) => (
                     <img
@@ -74,14 +80,14 @@ export default function Projects() {
                 </Slider>
               </div>
 
-              {/* overlay for large screens only */}
+              {/* Overlay for large screens */}
               <div className="absolute inset-0 hidden lg:flex bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 items-center justify-center">
                 <button className="btn bg-base-100 text-base-content px-6">
                   View Details
                 </button>
               </div>
 
-              {/* button always visible on small screens */}
+              {/* Button for small screens */}
               <div className="lg:hidden absolute -bottom-1 left-1/2 -translate-x-1/2 z-10 pb-3">
                 <button
                   className="btn btn-sm btn-outline"
@@ -102,7 +108,7 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal Details */}
       {selectedProject && (
         <Dialog
           open={!!selectedProject}
@@ -139,31 +145,35 @@ export default function Projects() {
                   ))}
                 </Slider>
 
-                <p className="mb-4">{selectedProject.description}</p>
+                <p className="mb-4 text-base-content/90">{selectedProject.description}</p>
+                
                 <div className="text-left space-y-3">
                   <div>
-                    <h4 className="font-semibold"> Features:</h4>
+                    <h4 className="font-semibold">Key Features:</h4>
                     <ul className="list-disc list-inside text-sm text-base-content/80">
                       {selectedProject.features.map((f, i) => (
                         <li key={i}>{f}</li>
                       ))}
                     </ul>
                   </div>
+
                   <div>
-                    <h4 className="font-semibold"> Challenges:</h4>
+                    <h4 className="font-semibold">Core Logic & Problem Solving:</h4>
                     <p className="text-sm text-base-content/80">
                       {selectedProject.challenges}
                     </p>
                   </div>
+
                   <div>
-                    <h4 className="font-semibold">Learnings:</h4>
+                    <h4 className="font-semibold">Key Takeaways & Analytical Learnings:</h4>
                     <p className="text-sm text-base-content/80">
                       {selectedProject.learnings}
                     </p>
                   </div>
+
                   {selectedProject.benefits && (
                     <div>
-                      <h4 className="font-semibold">Benefits:</h4>
+                      <h4 className="font-semibold">Functional Value:</h4>
                       <ul className="list-disc list-inside text-sm text-base-content/80">
                         {selectedProject.benefits.map((b, i) => (
                           <li key={i}>{b}</li>
@@ -180,7 +190,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="btn btn-sm btn-outline"
                   >
-                    GitHub
+                    View Code Base
                   </a>
                   <a
                     href={selectedProject.live}
@@ -188,7 +198,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="btn bg-blue-400/80 text-base-content px-6"
                   >
-                    Live Demo
+                    Live Preview
                   </a>
                 </div>
               </DialogPanel>

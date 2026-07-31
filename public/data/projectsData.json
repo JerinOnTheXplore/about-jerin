@@ -1,5 +1,36 @@
 [
   {
+    "id": "scm-01",
+    "name": "Import LC Workflow & Compliance Analysis",
+    "description": "An analytical study on streamlining the end-to-end documentation flow for commercial foreign trade, focusing on bank LCs, PI verification, and regulatory compliance.",
+    "images": [
+      "https://i.ibb.co.com/Ld2KG8jF/be.jpg"
+    ],
+    "features": [
+      "Process Mapping: Detailed tracking from Letter of Credit (LC) initiation to shipment release.",
+      "Document Audit: Accuracy verification for PI, IMP, TM forms, and commercial vouchers.",
+      "Bottleneck Reduction: Identification of communication delays between suppliers and issuing banks.",
+      "Regulatory Compliance: Mapping workflows to match Bangladesh Bank foreign trade guidelines."
+    ],
+    "challenges": "Analyzing manual workflow gaps across multiple departments (Banking, Procurement, and Customs) without a centralized ERP system, requiring meticulous log tracking.",
+    "learnings": "Gained deep insights into commercial banking processes, international trade documentation requirements, and methods to minimize LC amendment costs through preemptive verification."
+  },
+  {
+    "id": "tech-01",
+    "name": "Data Management & Analytics Dashboard",
+    "description": "A web-based analytical tool built to process, structure, and visualize complex datasets with real-time state management.",
+    "images": [
+      "https://i.ibb.co.com/PG9Py26y/data.avif"
+    ],
+    "features": [
+      "Dynamic Data Filtering & Sorting",
+      "Interactive UI with Instant UI Updates",
+      "Structured Component Architecture"
+    ],
+    "challenges": "Optimizing state updates for large datasets while maintaining seamless layout responsiveness.",
+    "learnings": "Enhanced structural logic building, data validation methods, and component-driven architecture."
+  },
+  {
     "id": 1,
     "name": "Libra Nova",
     "images": [
