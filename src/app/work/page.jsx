@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaBuilding, FaMapMarkerAlt, FaCalendarAlt, FaRegCheckCircle } from "react-icons/fa";
 
 export default function WorkExperience() {
   useEffect(() => {
@@ -16,16 +16,19 @@ export default function WorkExperience() {
 
   const workData = [
     {
-      role: "Executive (Commercial) – Supply Chain Management",
+      role: "Commercial Executive",
+      department: "Supply Chain Management (Foreign Trade)",
       company: "NATIONAL AGRICARE IMPORT AND EXPORT LTD.",
-      address: "CGDL SONARGAON TOWER,8,9,& 10/3, Free School Street, Kathalbagan, Dhaka, Bangladesh",
+      address: "CGDL SONARGAON IMTIAZ TOWER, 8,9 & 10/3, Free School Street, Kathalbagan, Dhaka, Bangladesh",
       duration: "June 10, 2026 – Present",
+      type: "Full-Time",
+      skills: ["Import Operations", "LC Processing", "PI & IMP Verification", "Commercial Banking", "Supplier Liaison", "Margin & Vouchers"],
       responsibilities: [
-        "Import documentation handling (LC, PI, IMP, TM forms)",
-        "Bank coordination for LC processing and submission",
-        "Procurement and supplier communication support",
-        "Margin, voucher, and commercial file preparation",
-        "Coordination with internal teams for shipment and documentation",
+        "End-to-end management of import documentation, including LC, PI, IMP, and TM forms.",
+        "Direct coordination with commercial banks for LC issuance, amendments, and document submission.",
+        "Facilitating overseas procurement support and managing effective supplier communications.",
+        "Meticulous preparation of commercial files, margin vouchers, and shipment records.",
+        "Cross-functional collaboration with internal logistics and operational teams to streamline shipments."
       ],
     },
   ];
@@ -33,85 +36,108 @@ export default function WorkExperience() {
   return (
     <section
       id="work"
-      className="bg-base-100 text-base-content pt-20 flex items-center justify-center"
+      className="bg-base-100 text-base-content py-24 flex items-center justify-center overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto px-6 w-full">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 w-full">
 
-        {/* heading */}
-        <h2
-          className="text-4xl md:text-5xl font-bold text-center mb-2"
-          data-aos="fade-up"
-        >
-          Work Experience
-        </h2>
-
-        <div
-          className="w-52 sm:w-56 md:w-64 h-1 bg-blue-400/80 mx-auto rounded mb-12"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        ></div>
-
-        {/* timeline */}
-        <div className="relative">
-          {/* vertical line */}
-          <div className="absolute left-5 top-0 w-1 bg-blue-400/80 h-full"></div>
-
-          <div className="flex flex-col gap-10">
-            {workData.map((work, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-6 relative pl-10"
-                data-aos="fade-up"
-                data-aos-delay={i * 200}
-              >
-                {/* icon */}
-                <div className="absolute -left-1 top-2 bg-blue-400/80 rounded w-5 h-5 flex items-center justify-center">
-                  <FaBriefcase className="text-white w-3 h-3" />
-                </div>
-
-                {/* work card */}
-                <div className="bg-base-300 rounded p-6 border-1 border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.1)] hover:shadow-lg transition-all duration-300 flex-1">
-                  
-                  <h3 className="text-xl font-semibold mb-1">
-                    {work.role}
-                  </h3>
-
-                  <p className="text-base-content/80 font-medium">
-                    {work.company}
-                  </p>
-                 <p className="text-base-content/70 mt-1 mb-3">
-                    <span className="font-medium">Address:</span>{" "}
-                    {work.address}
-                  </p>
-                  <p className="text-base-content/70 mt-1 mb-3">
-                    <span className="font-medium">Duration:</span>{" "}
-                    {work.duration}
-                  </p>
-
-                  {/* responsibilities */}
-                  <ul className="list-disc ml-5 text-base-content/70 space-y-1">
-                    {work.responsibilities.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Section Heading */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <span className="text-blue-400 font-semibold tracking-widest text-xs uppercase bg-blue-400/10 px-3 py-1 rounded-full border border-blue-400/20">
+            Professional Journey
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 tracking-tight">Work Experience</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400/20 via-blue-400/80 to-blue-400/20 mx-auto rounded-full mt-4"></div>
         </div>
 
-        {/* note */}
+        {/* Timeline Container */}
+        <div className="relative pl-6 sm:pl-10 border-l-2 border-blue-400/40 space-y-12">
+          {workData.map((work, i) => (
+            <div
+              key={i}
+              className="relative group"
+              data-aos="fade-up"
+              data-aos-delay={i * 200}
+            >
+              {/* Timeline Bullet Node */}
+              <div className="absolute -left-[31px] sm:-left-[49px] top-1 bg-blue-400/80 text-white p-3 rounded-xl shadow-lg shadow-blue-400/20 group-hover:scale-110 transition-transform duration-300">
+                <FaBriefcase className="w-4 h-4" />
+              </div>
+
+              {/* Experience Card */}
+              <div className="bg-base-200/50 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-base-content/10 shadow-sm hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-400/10 transition-all duration-300">
+                
+                {/* Header: Role & Type */}
+                <div className="flex flex-wrap justify-between items-start gap-3 mb-2">
+                  <div>
+                    <h3 className="text-2xl font-bold text-base-content group-hover:text-blue-400 transition-colors">
+                      {work.role}
+                    </h3>
+                    <p className="text-blue-400/90 font-medium text-sm sm:text-base mt-0.5">
+                      {work.department}
+                    </p>
+                  </div>
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-400/10 text-blue-400 border border-blue-400/30">
+                    {work.type}
+                  </span>
+                </div>
+
+                {/* Company & Details Section */}
+                <div className="space-y-2 text-xs sm:text-sm text-base-content/80 mt-4 mb-6 pb-5 border-b border-base-content/10">
+                  <div className="flex items-start gap-2 font-semibold text-base-content">
+                    <FaBuilding className="text-blue-400/80 mt-0.5 shrink-0" />
+                    <span>{work.company}</span>
+                  </div>
+                  <div className="flex items-start gap-2 leading-relaxed">
+                    <FaMapMarkerAlt className="text-blue-400/70 mt-0.5 shrink-0" />
+                    <span><strong className="font-medium">Address:</strong> {work.address}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <FaCalendarAlt className="text-blue-400/70 shrink-0" />
+                    <span><strong className="font-medium">Duration:</strong> {work.duration}</span>
+                  </div>
+                </div>
+
+                {/* Key Responsibilities */}
+                <h4 className="text-xs font-bold uppercase tracking-widest text-base-content/50 mb-4">
+                  Core Responsibilities
+                </h4>
+                <ul className="space-y-3 mb-6 text-sm sm:text-base text-base-content/80">
+                  {work.responsibilities.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <FaRegCheckCircle className="text-blue-400/80 mt-1 shrink-0 text-sm" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Domain Skill Badges */}
+                <div className="pt-2 flex flex-wrap gap-2">
+                  {work.skills.map((skill, idx) => (
+                    <span 
+                      key={idx} 
+                      className="text-xs px-3 py-1.5 rounded-lg bg-base-300/80 text-base-content/90 font-medium border border-base-content/5 hover:border-blue-400/40 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Closing Summary Box */}
         <div
-          className="mt-10 text-base-content/70 text-sm leading-relaxed text-center"
+          className="mt-14 p-6 rounded-2xl bg-blue-400/5 border border-blue-400/20 text-center text-sm leading-relaxed text-base-content/80 max-w-2xl mx-auto backdrop-blur-sm"
           data-aos="fade-up"
-          data-aos-delay="600"
+          data-aos-delay="400"
         >
           <p>
-            This role has provided me with hands-on experience in{" "}
-            <span className="font-medium">import operations, LC processing, and commercial documentation</span>, 
-            strengthening my understanding of real-world supply chain workflows.
+            ✨ <span className="font-semibold text-blue-400">Key Takeaway:</span> Experienced in handling foreign trade documentations, bank coordination for LCs, and commercial workflows to optimize international supply chain operations.
           </p>
         </div>
+
       </div>
     </section>
   );
