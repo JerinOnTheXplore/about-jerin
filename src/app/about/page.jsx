@@ -73,6 +73,7 @@ export default function About() {
                   alt="Jerin"
                   fill
                   sizes="(max-width: 768px) 176px, 224px"
+                  priority={true}
                   className="object-cover object-top"
                 />
               </motion.div>
