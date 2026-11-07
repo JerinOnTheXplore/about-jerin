@@ -17,9 +17,9 @@ export default function Education() {
 
   const educationData = [
     {
-      degree: "M.Sc. in Food & Nutrition (Ongoing)",
-      institution: "Govt. College of Applied Human Science",
-      duration: "June 14, 2026 – Present",
+      degree: "Master of Business Administration (MBA) (Ongoing)",
+      institution: "University of Scholars",
+      duration: "October 2026 – Present",
       isCurrent: true,
     },
     {
