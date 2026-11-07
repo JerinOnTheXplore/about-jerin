@@ -19,7 +19,6 @@ export default function WorkExperience() {
       role: "Commercial Executive",
       department: "Supply Chain Management (Foreign Trade)",
       company: "NATIONAL AGRICARE IMPORT AND EXPORT LTD.",
-      address: "CGDL SONARGAON IMTIAZ TOWER, 8,9 & 10/3, Free School Street, Kathalbagan, Dhaka, Bangladesh",
       duration: "June 10, 2026 – Present",
       type: "Full-Time",
       skills: ["Import Operations", "LC Processing", "PI & IMP Verification", "Commercial Banking", "Supplier Liaison", "Margin & Vouchers"],
@@ -87,10 +86,7 @@ export default function WorkExperience() {
                     <FaBuilding className="text-blue-400/80 mt-0.5 shrink-0" />
                     <span>{work.company}</span>
                   </div>
-                  <div className="flex items-start gap-2 leading-relaxed">
-                    <FaMapMarkerAlt className="text-blue-400/70 mt-0.5 shrink-0" />
-                    <span><strong className="font-medium">Address:</strong> {work.address}</span>
-                  </div>
+                  
                   <div className="flex items-center gap-2">
                     <FaCalendarAlt className="text-blue-400/70 shrink-0" />
                     <span><strong className="font-medium">Duration:</strong> {work.duration}</span>
